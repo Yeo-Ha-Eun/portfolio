@@ -1,0 +1,28 @@
+#box_wrap {
+  height: 100vh;
+  background-color: yellow; }
+
+#box_wrap .w26 .digital {
+  background-color: #100964;
+  color: #fffabf;
+  height: 24vh;
+  display: flex; }
+  #box_wrap .w26 .digital::after {
+    content: "";
+    position: absolute;
+    background: url("../images/index/dia.svg") no-repeat;
+    width: 18px;
+    height: 18px; }
+  #box_wrap .w26 .digital div {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 95%;
+    height: 90%;
+    border: 2px solid #fffabf;
+    margin: auto; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,15 @@
+@mixin bgsize($value) {
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    background-size: $value;
+  }
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+ }
+ @mixin border-radius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    border-radius: $value;
+  }

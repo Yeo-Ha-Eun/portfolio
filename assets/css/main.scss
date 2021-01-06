@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@import "_mixin";
+
+#box_wrap{height: 100vh; background-color: yellow;}
+#box_wrap .w26{
+    .digital{background-color: #100964; color: #fffabf;height: 24vh;display: flex;
+    &::after{
+        content: "";position: absolute;background: url("../images/index/dia.svg") no-repeat; width: 18px; height: 18px;}
+        div{
+            @include border-radius(50%);
+            @include border-box;
+            width: 95%; height: 90%; border: 2px solid #fffabf;margin: auto;
+        }
+}
+}
