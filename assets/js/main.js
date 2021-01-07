@@ -56,3 +56,23 @@ window.addEventListener('load', function () {
     var timer =setInterval(clock, 1000);
  
 });
+
+$(document).ready(function () {
+    var circleWid;
+    var aboutY;
+    $(window).on('resize', function () {
+        circleWid = $('#aboutWrap .circle').width(); 
+        aboutY = $('#aboutWrap .aboutMain').offset().top;
+        console.log(circleWid, aboutY);
+    });
+    $(window).trigger('resize');
+    //ABOUT ME 마우스 움직임 제어 - clientX, clientY (document 문서에서 부터 스크롤을 제외한 마우스의 좌표값)
+    $('#aboutWrap .aboutMain').on('mousemove', function (e) {
+        var x = e.clientX;  //마우스 수평 위치
+        var y = e.clientY - aboutY;  //마우스 수직위치 - .aboutMain의 브라우저 상단에서 수직 떨어진 거리
+        console.log(x, y);
+        $(this).find('.verline').css('left', x); //세로라인 : top은 0으로 고정되고 left만 마우스의 x좌표로 업데이트
+        $(this).find('.horline').css('top', y);
+        $(this).find('.circle').css({left: x - circleWid*0.5, top: y - circleWid*0.5});        
+    });
+});

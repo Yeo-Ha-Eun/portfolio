@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/flip.js"></script>
     <script src="assets/js/main.js"></script>
 </head>
 <body>
@@ -27,12 +28,19 @@
                             <span class="p_a">ME</span>
                         </h2>
                     </div>  
-                <div class="aboutMain p_r">
-                    <!-- 초록색 어떻게...? -->
-                    <img class="p_a f_c" src="assets/images/index/smile_before.png" alt="겹쳐진 타원 두개">
-                    <a href=""><img class="p_a smile" src="assets/images/index/smile.png" alt="노란색 스마일 캐릭터"></a>
-                    <img class="p_a l_c" src="assets/images/index/smile_after.png" alt="겹쳐진 타원 두개">
-                </div>
+                    <div class="aboutMain p_r">
+                        <!-- 세로라인, 가로라인, .circle 원이미지 처리
+    
+                            alt="겹쳐진 타원 두개" 는 스크린리더에서 읽어줄 필요 없는 장식 이랍니다
+                        -->
+                        <div class="verline line"></div>
+                        <div class="horline line"></div>
+                        <div class="circle"><img src="assets/images/index/focus.png" alt=""></div>
+                        
+                        <img class="f_c" src="assets/images/index/smile_before.png" alt="">
+                        <a href="" class="smile"><img src="assets/images/index/smile.png" alt="About"></a>
+                        <img class="l_c" src="assets/images/index/smile_after.png" alt="">
+                    </div>
                 <div class="position">
                 </div>
             </div>
@@ -54,6 +62,7 @@
                     <img src="assets/images/index/work.png" alt="작업물">
                 </div>
                 <div class="bottom clearfix">
+                    <p>CHOOSE!!</p>
                     <ul>
                         <li class="f_l half">
                             <button type="button" >GRAPIC DESIGN</button>
