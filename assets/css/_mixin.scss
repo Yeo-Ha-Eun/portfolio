@@ -13,3 +13,16 @@
     -moz-border-radius: $value;
     border-radius: $value;
   }
+@mixin transform($value...) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -o-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+@mixin transition($value...) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}

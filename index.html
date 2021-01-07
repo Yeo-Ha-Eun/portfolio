@@ -15,35 +15,40 @@
 <body>
     <div id="box_wrap">
         <h1 class="blind-b">여하은 포트폴리오</h1>
-        <div class="w26">
-            <div class="digital">
+        <div class="w26 p_r">
+            <div id="digitalBox">
                 <h2 class="blind-b">현재 시간을 알려주는 디지털 시계</h2>
-                <div class="circle"></div>
+                <div id="digital"></div>
             </div>
-            <div class="about_wrap">
-                <div class="about_tit">
-                    <h2>ABOUT ME</h2>
-                    <span>CLICK!<br>SMILE!</span>
-                </div>
-                <div class="about_main">
-                    <a href=""><img src="assets/images/index/smile.svg" alt="노란색 스마일 캐릭터"></a>
+            <div id="aboutWrap" >
+                <div class="tit p_r" >
+                        <h2>
+                            <span class="p_a">ABOUT</span>
+                            <span class="p_a">ME</span>
+                        </h2>
+                    </div>  
+                <div class="aboutMain p_r">
                     <!-- 초록색 어떻게...? -->
+                    <img class="p_a f_c" src="assets/images/index/smile_before.png" alt="겹쳐진 타원 두개">
+                    <a href=""><img class="p_a smile" src="assets/images/index/smile.png" alt="노란색 스마일 캐릭터"></a>
+                    <img class="p_a l_c" src="assets/images/index/smile_after.png" alt="겹쳐진 타원 두개">
                 </div>
-                <div><!-- x좌표, y좌표 --></div>
+                <div class="position">
+                </div>
             </div>
-            <div class="moveSection clearfix">
-                <div class="f_l box half">
+            <div class="clearfix" id="moveSection">
+                <div class="f_l half">
                     <div class="square box1"></div>
-                    <p>move<br>Free</p>
+                    <p>move<br><br>Free</p>
                 </div>
-                <div class="f_r box half">
+                <div class="f_r half">
                     <div class="square box2"></div>
-                    <p>move<br>to line</p>
+                    <p>move<br><br>to line</p>
                 </div>
             </div>
         </div>
         <div class="w52">
-            <div class="portfolio">
+            <div id="portfolio">
                 <h2 class="blind-b">work</h2>
                 <div class="top">
                     <img src="assets/images/index/work.png" alt="작업물">
