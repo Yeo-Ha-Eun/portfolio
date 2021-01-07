@@ -84,4 +84,20 @@
         p{font-size: 0.6vw;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
     }
     }
-}
+    .card{
+        position: relative;width: 100%;height: 29vh; 
+        .front{
+            @include bgsize(cover);
+            background: url("../images/index/yoda.jpg") no-repeat center;height:  29vh;width: 100%;
+            p{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
+        }
+        .back{position: relative;;color: #fff;background-color: #000;height: 29vh}
+    & > div{
+        @include transform(all 2s);
+    }
+    }
+    /* #ver .front{transform: rotateX(0deg);}
+    #ver:hover .front, #ver.flip .front{transform: rotateX(180deg);}
+    #ver .back{transform: rotateX(-180deg);}
+    #ver:hover .back, #ver.flip .back{transform: rotateX(0deg);} */
+    }
