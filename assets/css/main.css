@@ -135,123 +135,148 @@
     #box_wrap .w26 #moveSection .half:last-child p {
       color: #a1ffaa; }
 
-#box_wrap .w52 {
-  /* #ver .front{transform: rotateX(0deg);}
-  #ver:hover .front, #ver.flip .front{transform: rotateX(180deg);}
-  #ver .back{transform: rotateX(-180deg);}
-  #ver:hover .back, #ver.flip .back{transform: rotateX(0deg);} */ }
-  #box_wrap .w52 #portfolio {
-    height: 71%;
-    background-color: #1800fd;
-    font-size: 1.5vw;
-    font-family: Mot;
-    font-weight: 800;
-    color: #5d9eff;
-    position: relative;
-    letter-spacing: 0.27vw; }
-    #box_wrap .w52 #portfolio .top {
-      height: 75%; }
-    #box_wrap .w52 #portfolio .bottom {
-      position: absolute;
-      bottom: 0;
-      height: 35%;
-      width: 100%; }
-      #box_wrap .w52 #portfolio .bottom ul {
-        width: 100%;
-        height: 92%;
-        margin-top: 5px; }
-        #box_wrap .w52 #portfolio .bottom ul li {
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          width: 50%;
-          height: 50%;
-          border: 2px solid #5d9eff;
-          display: flex;
-          border-collapse: collapse; }
-          #box_wrap .w52 #portfolio .bottom ul li button {
-            width: 100%;
-            height: 83%;
-            margin: auto; }
-          #box_wrap .w52 #portfolio .bottom ul li p {
-            text-align: center; }
-        #box_wrap .w52 #portfolio .bottom ul li:nth-child(2), #box_wrap .w52 #portfolio .bottom ul li:nth-child(4) {
-          border-left: none; }
-        #box_wrap .w52 #portfolio .bottom ul li:nth-child(3), #box_wrap .w52 #portfolio .bottom ul li:nth-child(4) {
-          border-top: none; }
-        #box_wrap .w52 #portfolio .bottom ul li:hover {
-          color: #fff;
-          background: #5d9eff; }
-      #box_wrap .w52 #portfolio .bottom p {
-        font-size: 0.6vw;
+#box_wrap .w52 #portfolio {
+  height: 71%;
+  background-color: #1800fd;
+  font-size: 1.5vw;
+  font-family: Mot;
+  font-weight: 800;
+  color: #5d9eff;
+  position: relative;
+  letter-spacing: 0.27vw; }
+  #box_wrap .w52 #portfolio .top {
+    height: 75%; }
+  #box_wrap .w52 #portfolio .bottom {
+    position: absolute;
+    bottom: 0;
+    height: 35%;
+    width: 100%; }
+    #box_wrap .w52 #portfolio .bottom ul {
+      width: 100%;
+      height: 92%;
+      margin-top: 5px; }
+      #box_wrap .w52 #portfolio .bottom ul li {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        height: 50%;
+        border: 2px solid #5d9eff;
+        display: flex;
+        border-collapse: collapse; }
+        #box_wrap .w52 #portfolio .bottom ul li button {
+          width: 100%;
+          height: 83%;
+          margin: auto; }
+        #box_wrap .w52 #portfolio .bottom ul li p {
+          text-align: center; }
+      #box_wrap .w52 #portfolio .bottom ul li:nth-child(2), #box_wrap .w52 #portfolio .bottom ul li:nth-child(4) {
+        border-left: none; }
+      #box_wrap .w52 #portfolio .bottom ul li:nth-child(3), #box_wrap .w52 #portfolio .bottom ul li:nth-child(4) {
+        border-top: none; }
+      #box_wrap .w52 #portfolio .bottom ul li:hover {
         color: #fff;
-        letter-spacing: 6.25vw;
-        text-align: center;
-        margin-left: 5px; }
-  #box_wrap .w52 .card {
+        background: #5d9eff; }
+    #box_wrap .w52 #portfolio .bottom p {
+      font-size: 0.6vw;
+      color: #fff;
+      letter-spacing: 6.25vw;
+      text-align: center;
+      margin-left: 5px; }
+#box_wrap .w52 .card {
+  position: relative;
+  width: 100%;
+  height: 29vh;
+  perspective: 500px; }
+  #box_wrap .w52 .card .front {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background: url("../images/index/yoda.jpg") no-repeat center;
+    height: 29vh;
+    width: 100%; }
+    #box_wrap .w52 .card .front p {
+      position: absolute;
+      bottom: 5%;
+      left: 2%;
+      font-size: 0.6vw;
+      font-family: Mot;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 6.25vw;
+      text-align: center;
+      margin-left: 5px; }
+  #box_wrap .w52 .card .back {
     position: relative;
-    width: 100%;
-    height: 29vh; }
-    #box_wrap .w52 .card .front {
+    color: #fff;
+    background-color: #000;
+    height: 29vh;
+    font-family: Mot;
+    font-weight: 800; }
+    #box_wrap .w52 .card .back .yoda {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       background-size: cover;
-      background: url("../images/index/yoda.jpg") no-repeat center;
-      height: 29vh;
-      width: 100%; }
-      #box_wrap .w52 .card .front p {
-        position: absolute;
-        bottom: 5%;
-        left: 2%;
-        font-size: 0.6vw;
-        font-family: Mot;
-        font-weight: 800;
-        color: #fff;
-        letter-spacing: 6.25vw;
-        text-align: center;
-        margin-left: 5px; }
-    #box_wrap .w52 .card .back {
-      position: relative;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background: url("../images/index/yodaStiker.png") no-repeat center;
+      width: 212px;
+      height: 213px;
+      position: absolute;
+      top: 50%;
+      left: 3%; }
+    #box_wrap .w52 .card .back p {
+      font-size: 1vw;
+      letter-spacing: 0.18vw;
+      color: #9b9b9b; }
+    #box_wrap .w52 .card .back .phone {
+      position: absolute;
+      top: 35%;
+      left: 35%; }
+    #box_wrap .w52 .card .back .email {
+      position: absolute;
+      top: 50%;
+      left: 42%; }
+    #box_wrap .w52 .card .back .contact {
+      position: absolute;
+      bottom: 5%;
+      left: 2%;
+      font-size: 0.6vw;
       color: #fff;
-      background-color: #000;
-      height: 29vh;
-      font-family: Mot;
-      font-weight: 800; }
-      #box_wrap .w52 .card .back .yoda {
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        background: url("../images/index/yodaStiker.png") no-repeat center;
-        width: 229px;
-        height: 230px;
-        position: absolute; }
-      #box_wrap .w52 .card .back p {
-        font-size: 1vw;
-        letter-spacing: 0.18vw;
-        color: #9b9b9b; }
-      #box_wrap .w52 .card .back p:first-child {
-        position: absolute;
-        top: 40%;
-        left: 40%; }
-      #box_wrap .w52 .card .back .contact {
-        position: absolute;
-        bottom: 5%;
-        left: 2%;
-        font-size: 0.6vw;
-        color: #fff;
-        letter-spacing: 6.25vw;
-        text-align: center;
-        margin-left: 5px; }
-      #box_wrap .w52 .card .back a {
-        position: absolute;
-        font-size: 0.73vw;
-        color: #00ff24;
-        bottom: 2.9vw; }
-    #box_wrap .w52 .card > div {
-      -webkit-transform: all 2s;
-      -moz-transform: all 2s;
-      -o-transform: all 2s;
-      -ms-transform: all 2s;
-      transform: all 2s; }
+      letter-spacing: 6.25vw;
+      text-align: center;
+      margin-left: 5px; }
+    #box_wrap .w52 .card .back a {
+      position: absolute;
+      font-size: 0.73vw;
+      color: #00ff24;
+      bottom: 2.9vw;
+      font-weight: 500;
+      text-decoration: underline; }
+    #box_wrap .w52 .card .back .be {
+      right: 9.22vw; }
+    #box_wrap .w52 .card .back .insta {
+      right: 1.93vw; }
+  #box_wrap .w52 .card > div {
+    -webkit-transform: all 2s;
+    -moz-transform: all 2s;
+    -o-transform: all 2s;
+    -ms-transform: all 2s;
+    transform: all 2s;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0; }
+#box_wrap .w52 #ver .front {
+  transform: rotateX(0deg); }
+#box_wrap .w52 #ver:hover .front, #box_wrap .w52 #ver.flip .front {
+  transform: rotateX(180deg); }
+#box_wrap .w52 #ver .back {
+  transform: rotateX(-180deg); }
+#box_wrap .w52 #ver:hover .back, #box_wrap .w52 #ver.flip .back {
+  transform: rotateX(0deg); }
 
 /*# sourceMappingURL=main.css.map */
