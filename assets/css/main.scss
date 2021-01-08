@@ -89,9 +89,18 @@
         .front{
             @include bgsize(cover);
             background: url("../images/index/yoda.jpg") no-repeat center;height:  29vh;width: 100%;
-            p{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
+            p{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;font-family: Mot;font-weight: 800;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
         }
-        .back{position: relative;;color: #fff;background-color: #000;height: 29vh}
+        .back{position: relative;;color: #fff;background-color: #000;height: 29vh;font-family: Mot;font-weight: 800;
+        .yoda{
+            @include bgsize(cover);
+            background: url("../images/index/yodaStiker.png") no-repeat center;width: 229px;height: 230px;position: absolute;
+        }
+        p{font-size: 1vw;letter-spacing: 0.18vw;color: #9b9b9b;}
+        p:first-child{position: absolute;top: 40%;left: 40%;}
+        .contact{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
+        a{position: absolute;font-size: 0.73vw;color: #00ff24;bottom: 2.9vw}
+    }
     & > div{
         @include transform(all 2s);
     }

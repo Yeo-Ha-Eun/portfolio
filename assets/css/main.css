@@ -204,6 +204,8 @@
         bottom: 5%;
         left: 2%;
         font-size: 0.6vw;
+        font-family: Mot;
+        font-weight: 800;
         color: #fff;
         letter-spacing: 6.25vw;
         text-align: center;
@@ -212,7 +214,39 @@
       position: relative;
       color: #fff;
       background-color: #000;
-      height: 29vh; }
+      height: 29vh;
+      font-family: Mot;
+      font-weight: 800; }
+      #box_wrap .w52 .card .back .yoda {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background: url("../images/index/yodaStiker.png") no-repeat center;
+        width: 229px;
+        height: 230px;
+        position: absolute; }
+      #box_wrap .w52 .card .back p {
+        font-size: 1vw;
+        letter-spacing: 0.18vw;
+        color: #9b9b9b; }
+      #box_wrap .w52 .card .back p:first-child {
+        position: absolute;
+        top: 40%;
+        left: 40%; }
+      #box_wrap .w52 .card .back .contact {
+        position: absolute;
+        bottom: 5%;
+        left: 2%;
+        font-size: 0.6vw;
+        color: #fff;
+        letter-spacing: 6.25vw;
+        text-align: center;
+        margin-left: 5px; }
+      #box_wrap .w52 .card .back a {
+        position: absolute;
+        font-size: 0.73vw;
+        color: #00ff24;
+        bottom: 2.9vw; }
     #box_wrap .w52 .card > div {
       -webkit-transform: all 2s;
       -moz-transform: all 2s;
