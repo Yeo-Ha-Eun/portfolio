@@ -58,8 +58,26 @@ window.addEventListener('load', function () {
 });
 
 $(document).ready(function () {
+//스마일
     var circleWid;
     var aboutY;
+    //그라디언트 회전
+    var wid;
+    var hei;
+    var makeSize;
+
+    //공튀기기
+    var _panel = $("#panel");
+    var _ball = $("#ball");
+    var startX = 0;  //ball이 움직이기 시작하는 위치
+    var startY = 0;
+    var endX;       //ball이 움직일수 있는 최대 위치
+    var endY;
+    var stepSize = 6;  //숫자가 작을수록 느려지고, 클수록 빨라진다
+    var stepX = stepSize;
+    var stepY = stepSize;
+    var ballTimer = 0;
+
     $(window).on('resize', function () {
         circleWid = $('#aboutWrap .circle').width(); 
         aboutY = $('#aboutWrap .aboutMain').offset().top;
@@ -75,4 +93,193 @@ $(document).ready(function () {
         $(this).find('.horline').css('top', y);
         $(this).find('.circle').css({left: x - circleWid*0.5, top: y - circleWid*0.5});        
     });
+    wid = $('#gradient').width();
+    hei = $('#gradient').height();
+
+    makeSize = hei * 3;
+    console.log(wid, hei, makeSize);
+    $('#gradient .rotate').css({width: makeSize, height: makeSize, top: -(makeSize-hei)*0.5, left: -(makeSize-wid)*0.5});
+
+
+    endX = _panel.width() - _ball.width(); //ball이 움직일수 있는 최대 위치
+    endY = _panel.height() - _ball.height();
+  });
+  $(window).trigger('resize');
+
+  //1) 그라디언트 회전
+  // 그라디언트 영역 내에서 마우스를 움직이면 배경이미지의 위치를 변경한다
+  $('#gradient').on('mousemove', function (e) {
+            var mouseX = e.clientX; //document 문서에서 부터 스크롤을 제외한 마우스의 좌표값
+            var mouseY = e.clientY;
+    //console.log(mouseX + ' : ' + mouseY);
+    
+    //백틱(`)을 이용하면 내부에 바로 제이쿼리를 작성할수 있다
+    //var bgPos = `${50 - (mouseX - wid*0.5) * 0.07}% ${50 - (mouseY - hei*0.5) * 0.07}%`; //#gradient가 정사각형일때
+    var bgPos = `${150 - (mouseX - wid*0.5) * 0.07}% ${30 - (mouseY - hei*0.5) * 0.07}%`; //세로로 긴 직사각형일때
+    console.log(bgPos);
+            $('.rotate').css('background-position', bgPos);
+  });
+  
+  // 360도 회전 함수 생성
+  var timer;
+  function AnimateRotate() {
+    var duration= 4000;
+    timer = setTimeout(function() {
+      AnimateRotate();
+    },duration);   
+
+    $({deg: 0}).animate({deg: 360}, {
+        duration: duration,
+        step: function(now) {
+          $('.rotate').css({'transform': 'rotate('+ now +'deg)'});
+        }
+    });
+  }
+
+  // 그라디언트에 진입하면 회전함수를 호출하고, 빠져나오면 반복실행을 멈춘다
+  $('#gradient').on({
+    mouseenter: function () {
+      AnimateRotate();
+    },
+    mouseleave: function () {
+      clearTimeout(timer);
+    }
+  });
+
+  //2) 공튀기기
+  var _panel = $("#panel");
+  var _ball = $("#ball");
+  var startX = 0;  //ball이 움직이기 시작하는 위치
+  var startY = 0;
+  var endX;       //ball이 움직일수 있는 최대 위치
+  var endY;
+  var stepSize = 6;  //숫자가 작을수록 느려지고, 클수록 빨라진다
+  var stepX = stepSize;
+  var stepY = stepSize;
+  var ballTimer = 0;
+
+  $('#panel').on({
+    mouseenter: function () {
+      start(); //패널에 진입하면 시작되고
+    },
+    mouseleave: function () {
+      stopMove(); //패널에서 빠져 나오면 멈춘다
+    }
 });
+/*  //그라디언트 회전
+      var wid;
+      var hei;
+      var makeSize;
+
+      //공튀기기
+      var _panel = $("#panel");
+      var _ball = $("#ball");
+      var startX = 0;  //ball이 움직이기 시작하는 위치
+      var startY = 0;
+      var endX;       //ball이 움직일수 있는 최대 위치
+      var endY;
+      var stepSize = 6;  //숫자가 작을수록 느려지고, 클수록 빨라진다
+      var stepX = stepSize;
+      var stepY = stepSize;
+      var ballTimer = 0;
+
+      $(window).on('resize', function () {
+        // 그라디언트의 가로, 세로 크기
+        wid = $('#gradient').width();
+        hei = $('#gradient').height();
+
+        makeSize = hei * 3;
+        console.log(wid, hei, makeSize);
+        $('#gradient .rotate').css({width: makeSize, height: makeSize, top: -(makeSize-hei)*0.5, left: -(makeSize-wid)*0.5});
+
+
+        endX = _panel.width() - _ball.width(); //ball이 움직일수 있는 최대 위치
+        endY = _panel.height() - _ball.height();
+      });
+      $(window).trigger('resize');
+
+      //1) 그라디언트 회전
+      // 그라디언트 영역 내에서 마우스를 움직이면 배경이미지의 위치를 변경한다
+      $('#gradient').on('mousemove', function (e) {
+				var mouseX = e.clientX; //document 문서에서 부터 스크롤을 제외한 마우스의 좌표값
+				var mouseY = e.clientY;
+        //console.log(mouseX + ' : ' + mouseY);
+        
+        //백틱(`)을 이용하면 내부에 바로 제이쿼리를 작성할수 있다
+        //var bgPos = `${50 - (mouseX - wid*0.5) * 0.07}% ${50 - (mouseY - hei*0.5) * 0.07}%`; //#gradient가 정사각형일때
+        var bgPos = `${150 - (mouseX - wid*0.5) * 0.07}% ${30 - (mouseY - hei*0.5) * 0.07}%`; //세로로 긴 직사각형일때
+        console.log(bgPos);
+				$('.rotate').css('background-position', bgPos);
+      });
+      
+      // 360도 회전 함수 생성
+      var timer;
+      function AnimateRotate() {
+        var duration= 4000;
+        timer = setTimeout(function() {
+          AnimateRotate();
+        },duration);   
+
+        $({deg: 0}).animate({deg: 360}, {
+            duration: duration,
+            step: function(now) {
+              $('.rotate').css({'transform': 'rotate('+ now +'deg)'});
+            }
+        });
+      }
+
+      // 그라디언트에 진입하면 회전함수를 호출하고, 빠져나오면 반복실행을 멈춘다
+      $('#gradient').on({
+        mouseenter: function () {
+          AnimateRotate();
+        },
+        mouseleave: function () {
+          clearTimeout(timer);
+        }
+      });
+
+      //2) 공튀기기
+      var _panel = $("#panel");
+      var _ball = $("#ball");
+      var startX = 0;  //ball이 움직이기 시작하는 위치
+      var startY = 0;
+      var endX;       //ball이 움직일수 있는 최대 위치
+      var endY;
+      var stepSize = 6;  //숫자가 작을수록 느려지고, 클수록 빨라진다
+      var stepX = stepSize;
+      var stepY = stepSize;
+      var ballTimer = 0;
+    
+      $('#panel').on({
+        mouseenter: function () {
+          start(); //패널에 진입하면 시작되고
+        },
+        mouseleave: function () {
+          stopMove(); //패널에서 빠져 나오면 멈춘다
+        }
+      });
+
+      function start(){
+        if (ballTimer === 0)
+          ballTimer = setInterval(startMove, 25);
+      }
+
+      function startMove(){
+        startX += stepX;  //시작위치에서 stepSize인 6만큼씩을 더해서 움직이게 한다
+        startY += stepY;
+        if (startX > endX) stepX = -stepSize;  //최대 위치를 벗어나면 빼주어 내부로 다시 들어오게 함
+        if (startX < 0) stepX = stepSize;      //최소 위치보다 더 작아지려하면 다시 초기화
+        if (startY > endY) stepY = -stepSize;
+        if (startY < 0) stepY = stepSize;
+
+        //absolute 속성을 지닌 #ball의 top과 left 값을 update한다
+        _ball.css({top: startY + "px", left: startX + "px"});
+        //console.log(ballTimer);
+      }
+
+      function stopMove(){
+        if (ballTimer !== 0){
+          clearInterval(ballTimer);
+          ballTimer = 0;
+        }
+      } */
