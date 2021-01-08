@@ -82,7 +82,19 @@ $(document).ready(function () {
         circleWid = $('#aboutWrap .circle').width(); 
         aboutY = $('#aboutWrap .aboutMain').offset().top;
         console.log(circleWid, aboutY);
-    });
+
+        wid = $('#gradient').width();
+        hei = $('#gradient').height();
+    
+        makeSize = hei * 3;
+        console.log(wid, hei, makeSize);
+        $('#gradient .rotate').css({width: makeSize, height: makeSize, top: -(makeSize-hei)*0.5, left: -(makeSize-wid)*0.5});
+    
+    
+        endX = _panel.width() - _ball.width(); //ball이 움직일수 있는 최대 위치
+        endY = _panel.height() - _ball.height();
+      });
+      
     $(window).trigger('resize');
     //ABOUT ME 마우스 움직임 제어 - clientX, clientY (document 문서에서 부터 스크롤을 제외한 마우스의 좌표값)
     $('#aboutWrap .aboutMain').on('mousemove', function (e) {
@@ -93,19 +105,8 @@ $(document).ready(function () {
         $(this).find('.horline').css('top', y);
         $(this).find('.circle').css({left: x - circleWid*0.5, top: y - circleWid*0.5});        
     });
-    wid = $('#gradient').width();
-    hei = $('#gradient').height();
 
-    makeSize = hei * 3;
-    console.log(wid, hei, makeSize);
-    $('#gradient .rotate').css({width: makeSize, height: makeSize, top: -(makeSize-hei)*0.5, left: -(makeSize-wid)*0.5});
-
-
-    endX = _panel.width() - _ball.width(); //ball이 움직일수 있는 최대 위치
-    endY = _panel.height() - _ball.height();
-  });
-  $(window).trigger('resize');
-
+ 
   //1) 그라디언트 회전
   // 그라디언트 영역 내에서 마우스를 움직이면 배경이미지의 위치를 변경한다
   $('#gradient').on('mousemove', function (e) {
@@ -165,6 +166,7 @@ $(document).ready(function () {
     mouseleave: function () {
       stopMove(); //패널에서 빠져 나오면 멈춘다
     }
+    });
 });
 /*  //그라디언트 회전
       var wid;
