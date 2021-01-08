@@ -187,7 +187,7 @@
   position: relative;
   width: 100%;
   height: 29vh;
-  perspective: 500px; }
+  perspective: 100vw; }
   #box_wrap .w52 .card .front {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -278,5 +278,25 @@
   transform: rotateX(-180deg); }
 #box_wrap .w52 #ver:hover .back, #box_wrap .w52 #ver.flip .back {
   transform: rotateX(0deg); }
+
+#box_wrap .w22 #gradient {
+  height: 71vh;
+  overflow: hidden; }
+  #box_wrap .w22 #gradient .rotate {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: url("images/gradient.svg") no-repeat 50% 50%;
+    border: 1px solid red;
+    background-size: 66%; }
+#box_wrap .w22 #panel {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 29vh;
+  background: url("../images/index/lineBg.jpg");
+  background-color: #000; }
 
 /*# sourceMappingURL=main.css.map */

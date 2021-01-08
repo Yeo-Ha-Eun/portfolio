@@ -85,7 +85,7 @@
     }
     }
     .card{
-        position: relative;width: 100%;height: 29vh; perspective: 500px;
+        position: relative;width: 100%;height: 29vh; perspective: 100vw;
         .front{
             @include bgsize(cover);
             background: url("../images/index/yoda.jpg") no-repeat center;height:  29vh;width: 100%;
@@ -106,7 +106,8 @@
         .insta{right: 1.93vw;}
     }
     & > div{
-        @include transform(all 2s);backface-visibility: hidden;position: absolute;top: 0;left: 0;
+        @include transform(all 2s);
+        backface-visibility: hidden;position: absolute;top: 0;left: 0;
     }
     }
     #ver .front{transform: rotateX(0deg);}
@@ -114,3 +115,11 @@
     #ver .back{transform: rotateX(-180deg);}
     #ver:hover .back, #ver.flip .back{transform: rotateX(0deg);}
     }
+
+#box_wrap .w22{
+    #gradient{height: 71vh;overflow: hidden;
+        .rotate{position: absolute;top: -100%;left: -100%;width: 300%;height: 300%;background: url("images/gradient.svg") no-repeat 50% 50%;border: 1px solid red;background-size: 66%;}}
+    #panel{
+        @include bgsize(cover);
+        height: 29vh;background: url("../images/index/lineBg.jpg");background-color: #000;}
+}
