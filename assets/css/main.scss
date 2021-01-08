@@ -85,19 +85,32 @@
     }
     }
     .card{
-        position: relative;width: 100%;height: 29vh; 
+        position: relative;width: 100%;height: 29vh; perspective: 500px;
         .front{
             @include bgsize(cover);
             background: url("../images/index/yoda.jpg") no-repeat center;height:  29vh;width: 100%;
-            p{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
+            p{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;font-family: Mot;font-weight: 800;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
         }
-        .back{position: relative;;color: #fff;background-color: #000;height: 29vh}
+        .back{position: relative;;color: #fff;background-color: #000;height: 29vh;font-family: Mot;font-weight: 800;
+        .yoda{
+            @include bgsize(cover);
+            @include transform(translateY(-50%));
+            background: url("../images/index/yodaStiker.png") no-repeat center;width: 212px;height: 213px;position: absolute;top: 50%;left: 3%;
+        }
+        p{font-size: 1vw;letter-spacing: 0.18vw;color: #9b9b9b;}
+        .phone{position: absolute;top: 35%;left: 35%;}
+        .email{position: absolute;top: 50%;left: 42%;}
+        .contact{position: absolute;bottom: 5%;left: 2%;font-size: 0.6vw;color: #fff;letter-spacing: 6.25vw;text-align: center;margin-left: 5px;}
+        a{position: absolute;font-size: 0.73vw;color: #00ff24;bottom: 2.9vw;font-weight: 500;text-decoration: underline;}
+        .be{right:9.22vw;}
+        .insta{right: 1.93vw;}
+    }
     & > div{
-        @include transform(all 2s);
+        @include transform(all 2s);backface-visibility: hidden;position: absolute;top: 0;left: 0;
     }
     }
-    /* #ver .front{transform: rotateX(0deg);}
+    #ver .front{transform: rotateX(0deg);}
     #ver:hover .front, #ver.flip .front{transform: rotateX(180deg);}
     #ver .back{transform: rotateX(-180deg);}
-    #ver:hover .back, #ver.flip .back{transform: rotateX(0deg);} */
+    #ver:hover .back, #ver.flip .back{transform: rotateX(0deg);}
     }
