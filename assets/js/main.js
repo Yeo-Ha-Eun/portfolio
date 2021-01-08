@@ -61,6 +61,7 @@ $(document).ready(function () {
 //스마일
     var circleWid;
     var aboutY;
+
     //그라디언트 회전
     var wid;
     var hei;
@@ -147,26 +148,51 @@ $(document).ready(function () {
     }
   });
 
-  //2) 공튀기기
-  var _panel = $("#panel");
-  var _ball = $("#ball");
-  var startX = 0;  //ball이 움직이기 시작하는 위치
-  var startY = 0;
-  var endX;       //ball이 움직일수 있는 최대 위치
-  var endY;
-  var stepSize = 6;  //숫자가 작을수록 느려지고, 클수록 빨라진다
-  var stepX = stepSize;
-  var stepY = stepSize;
-  var ballTimer = 0;
+   //2) 공튀기기
+   var _panel = $("#panel");
+   var _ball = $("#ball");
+   var startX = 0;  //ball이 움직이기 시작하는 위치
+   var startY = 0;
+   var endX;       //ball이 움직일수 있는 최대 위치
+   var endY;
+   var stepSize = 6;  //숫자가 작을수록 느려지고, 클수록 빨라진다
+   var stepX = stepSize;
+   var stepY = stepSize;
+   var ballTimer = 0;
+ 
+   $('#panel').on({
+     mouseenter: function () {
+       start(); //패널에 진입하면 시작되고
+     },
+     mouseleave: function () {
+       stopMove(); //패널에서 빠져 나오면 멈춘다
+     }
+   });
 
-  $('#panel').on({
-    mouseenter: function () {
-      start(); //패널에 진입하면 시작되고
-    },
-    mouseleave: function () {
-      stopMove(); //패널에서 빠져 나오면 멈춘다
+   function start(){
+     if (ballTimer === 0)
+       ballTimer = setInterval(startMove, 25);
+   }
+
+   function startMove(){
+     startX += stepX;  //시작위치에서 stepSize인 6만큼씩을 더해서 움직이게 한다
+     startY += stepY;
+     if (startX > endX) stepX = -stepSize;  //최대 위치를 벗어나면 빼주어 내부로 다시 들어오게 함
+     if (startX < 0) stepX = stepSize;      //최소 위치보다 더 작아지려하면 다시 초기화
+     if (startY > endY) stepY = -stepSize;
+     if (startY < 0) stepY = stepSize;
+
+     //absolute 속성을 지닌 #ball의 top과 left 값을 update한다
+     _ball.css({top: startY + "px", left: startX + "px"});
+     //console.log(ballTimer);
+   }
+
+   function stopMove(){
+    if (ballTimer !== 0){
+        clearInterval(ballTimer);
+        ballTimer = 0;
+      }
     }
-    });
 });
 /*  //그라디언트 회전
       var wid;
