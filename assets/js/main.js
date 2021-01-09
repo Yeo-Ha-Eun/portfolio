@@ -194,3 +194,11 @@ $(document).ready(function () {
       }
     }
 });
+
+var modal = document.querySelector('#modal');
+setTimeout(function(){
+   modal.classList.add('force');
+}, 2000);
+setTimeout(function(){
+   modal.classList.remove('force');
+}, 3000);

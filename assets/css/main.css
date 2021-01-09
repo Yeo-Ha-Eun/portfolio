@@ -281,7 +281,8 @@
 
 #box_wrap .w22 #gradient {
   height: 71vh;
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
   #box_wrap .w22 #gradient .rotate {
     position: absolute;
     top: -100%;
@@ -329,8 +330,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-                                                        /* opacity: 0;
-*/ }
+  opacity: 0;
+  transition: opacity 0.5s;
+  animation: 1s hide infinite;
+  animation-delay: 0.5s; }
+  .modal:target, .modal.force {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+    animation: none; }
+    .modal:target .view, .modal.force .view {
+      transition: all 1s ease-in-out;
+      transform: translateY(0px); }
   .modal .background {
     position: absolute;
     width: 100%;
@@ -340,15 +354,22 @@
     background-color: #000;
     opacity: 0.5; }
   .modal .view-container .view {
-    /* @include transition(all 1s ease-in-out); */
-    /* @include transform(translateY(-100%); */
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
     position: relative;
     margin: 50px auto;
     width: 44.38vw;
     background: #fff;
     font-size: 0.63vw;
     border: 2px solid #000;
-    height: 43.07vw; }
+    height: 44.5vw; }
     .modal .view-container .view .header {
       font-size: 0.78vw;
       height: 2.24vw;
@@ -373,7 +394,14 @@
         font-size: 3vw;
         position: absolute;
         top: 2.2vw;
-        left: 10%; }
+        left: 10%;
+        z-index: 10; }
+      .modal .view-container .view .content .triangle {
+        position: absolute;
+        top: 7.3vw;
+        right: 9%; }
+        .modal .view-container .view .content .triangle img {
+          width: 12.66vw; }
       .modal .view-container .view .content .intro {
         -webkit-border-radius: 22px;
         -moz-border-radius: 22px;
@@ -385,8 +413,147 @@
         top: 10.2vw;
         left: 7%;
         font-family: yoon; }
+        .modal .view-container .view .content .intro div {
+          display: inline-block;
+          position: absolute; }
+        .modal .view-container .view .content .intro .haeun {
+          width: 11.25vw;
+          top: 1.5vw;
+          left: 1vw; }
+        .modal .view-container .view .content .intro .sand {
+          width: 12.66vw;
+          top: 6vw;
+          left: 12.5vw; }
+        .modal .view-container .view .content .intro .sky {
+          width: 25vw;
+          bottom: 1.3vw;
+          right: 0.5vw; }
         .modal .view-container .view .content .intro img {
           height: auto;
-          max-width: 100%; }
+          max-width: 100%;
+          vertical-align: bottom; }
+        .modal .view-container .view .content .intro ul {
+          float: right;
+          width: 24vw;
+          height: 100%; }
+          .modal .view-container .view .content .intro ul .name {
+            float: left;
+            height: 100%;
+            width: 40%; }
+          .modal .view-container .view .content .intro ul .birth, .modal .view-container .view .content .intro ul .eMail, .modal .view-container .view .content .intro ul .tel, .modal .view-container .view .content .intro ul .introTxt {
+            float: right;
+            width: 60%; }
+          .modal .view-container .view .content .intro ul li {
+            margin-top: 0.8vw; }
+          .modal .view-container .view .content .intro ul .section {
+            height: 100%; }
+            .modal .view-container .view .content .intro ul .section li {
+              width: 100%; }
+          .modal .view-container .view .content .intro ul .name, .modal .view-container .view .content .intro ul .birth {
+            margin-top: 2.2vw; }
+          .modal .view-container .view .content .intro ul .eMail p + p {
+            padding-left: 0.58vw; }
+          .modal .view-container .view .content .intro ul .tel p + p {
+            padding-left: 1.8vw; }
+          .modal .view-container .view .content .intro ul .introTxt p + p {
+            padding-left: 1.3vw; }
+          .modal .view-container .view .content .intro ul li > p {
+            float: left; }
+          .modal .view-container .view .content .intro ul li > p + p {
+            margin-left: 1.4vw; }
+    .modal .view-container .view .down {
+      position: absolute;
+      top: 31vw;
+      width: 100%;
+      font-family: yoon; }
+      .modal .view-container .view .down > div {
+        float: left;
+        width: 100%; }
+        .modal .view-container .view .down > div > div {
+          float: left;
+          width: 41%;
+          padding-left: 9%; }
+          .modal .view-container .view .down > div > div > h2 {
+            padding-bottom: 1.5vw; }
+      .modal .view-container .view .down .education ul {
+        width: 82%; }
+        .modal .view-container .view .down .education ul li {
+          width: 100%; }
+        .modal .view-container .view .down .education ul li + li {
+          margin-top: 1.5vw; }
+        .modal .view-container .view .down .education ul li > p {
+          float: left; }
+        .modal .view-container .view .down .education ul p + p {
+          margin-left: 3.13vw; }
+      .modal .view-container .view .down .do ul .design, .modal .view-container .view .down .do ul .coding {
+        width: 100%; }
+        .modal .view-container .view .down .do ul .design + li, .modal .view-container .view .down .do ul .coding + li {
+          margin-top: 1.41vw; }
+        .modal .view-container .view .down .do ul .design > p, .modal .view-container .view .down .do ul .coding > p {
+          margin-right: 0.5vw;
+          width: 20%; }
+        .modal .view-container .view .down .do ul .design p, .modal .view-container .view .down .do ul .coding p {
+          float: left; }
+        .modal .view-container .view .down .do ul .design ul >, .modal .view-container .view .down .do ul .coding ul > {
+          float: right;
+          width: 80%; }
+          .modal .view-container .view .down .do ul .design ul > > li, .modal .view-container .view .down .do ul .coding ul > > li {
+            width: 100%;
+            float: left; }
+        .modal .view-container .view .down .do ul .design .percent, .modal .view-container .view .down .do ul .coding .percent {
+          width: 1.98vw;
+          display: inline-block; }
+          .modal .view-container .view .down .do ul .design .percent > p, .modal .view-container .view .down .do ul .coding .percent > p {
+            width: 100%;
+            text-align: center; }
+        .modal .view-container .view .down .do ul .design .percent + .percent, .modal .view-container .view .down .do ul .coding .percent + .percent {
+          margin-left: 0.5vw; }
+      .modal .view-container .view .down .do ul .design .p100 {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: relative;
+        width: 1.93vw;
+        height: 1.98vw;
+        background: #ff7800; }
+        .modal .view-container .view .down .do ul .design .p100 p:first-child {
+          -webkit-transform: translateY(-80%);
+          -moz-transform: translateY(-80%);
+          -o-transform: translateY(-80%);
+          -ms-transform: translateY(-80%);
+          transform: translateY(-80%);
+          position: absolute;
+          top: 50%; }
+        .modal .view-container .view .down .do ul .design .p100 p:last-child {
+          font-size: 0.52vw;
+          position: absolute;
+          bottom: 0; }
+      .modal .view-container .view .down .do ul .design .orangeTop {
+        width: 1.93vw; }
+        .modal .view-container .view .down .do ul .design .orangeTop img {
+          height: auto;
+          max-width: 100%;
+          vertical-align: bottom; }
+      .modal .view-container .view .down .do ul .design .p70, .modal .view-container .view .down .do ul .design .p60, .modal .view-container .view .down .do ul .design .p50 {
+        position: relative; }
+        .modal .view-container .view .down .do ul .design .p70 p, .modal .view-container .view .down .do ul .design .p60 p, .modal .view-container .view .down .do ul .design .p50 p {
+          width: 100%;
+          text-align: center; }
+        .modal .view-container .view .down .do ul .design .p70 p:first-child, .modal .view-container .view .down .do ul .design .p60 p:first-child, .modal .view-container .view .down .do ul .design .p50 p:first-child {
+          -webkit-transform: translateY(-80%);
+          -moz-transform: translateY(-80%);
+          -o-transform: translateY(-80%);
+          -ms-transform: translateY(-80%);
+          transform: translateY(-80%);
+          position: absolute;
+          top: 50%; }
+        .modal .view-container .view .down .do ul .design .p70 p:last-child, .modal .view-container .view .down .do ul .design .p60 p:last-child, .modal .view-container .view .down .do ul .design .p50 p:last-child {
+          font-size: 0.52vw;
+          position: absolute;
+          bottom: 0; }
+
+@keyframes hide {
+  0%, 100% {
+    transform: translateY(-100%); } }
 
 /*# sourceMappingURL=main.css.map */
