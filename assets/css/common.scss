@@ -72,13 +72,14 @@
 };
 
 /* tag reset */
-body, h1, h2, p, button, img, figure, ul, li{margin: 0;padding: 0;}
-h1, h2{font-size: 100%;font-weight: inherit;}
+body, h1, h2, h3, p, button, img, figure, ul, li{margin: 0;padding: 0;}
+h1, h2, h3{font-size: 100%;font-weight: inherit;}
 ul, li{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none; color: inherit;}
 button{background: none; border: none; cursor: pointer;font-family: inherit;font-size: inherit;color: inherit;font-weight: inherit;}
 img{border: none; vertical-align: top;max-width: 100%;}
-figure{display: block;}
+figure, nav, section {display: block;}
+
 
 /* common class */
 .w26 {width: 26%;}
