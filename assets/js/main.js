@@ -1,5 +1,11 @@
   
 $(document).ready(function () {
+
+  $('#moveSection .box3').draggable({
+    axis: 'x',  //x축-가로방향
+    containment: '.lightGreen'
+});
+
   var digEle = document.getElementById('digital');
 
   //스마일
@@ -368,4 +374,5 @@ $('#aboutWrap .smile').on('click', function (e) {
      $menu.eq(tgIdx).addClass('on').siblings().removeClass('on');
      $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
  });
+ 
 });

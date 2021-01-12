@@ -54,7 +54,11 @@
     .half{width: 50%;height: 100%;position: relative;
         p{
             @include transform(translate(-50%, -50%));
-           position: absolute;top: 50%;left: 50%;text-align: center;}}
+           position: absolute;top: 50%;left: 50%;text-align: center;}
+           .box2{width: 3.18vw;height: 3.91vw;right: 0.8vw;bottom: 1vw;}
+           .square{position: absolute;
+            img{height: auto;max-width: 100%;vertical-align: bottom;}
+        }}
     .half:first-child{
         @include bgsize(cover);
         background: url("../images/index/holrogramBg.jpg") no-repeat center;position: relative;
@@ -68,6 +72,9 @@
         }
         .lineTop{top: 0.94vw;}
         .lineDown{bottom: 1.73vw;}
+        
+       
+        .box3{height: 3.91vw;width: 3.91vw;top: 0.42vw;left: 0.42vw;cursor: e-resize;}
     }//16px=0.8vw
     }
 }

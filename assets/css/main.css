@@ -119,6 +119,17 @@
       top: 50%;
       left: 50%;
       text-align: center; }
+    #box_wrap .w26 #moveSection .half .box2 {
+      width: 3.18vw;
+      height: 3.91vw;
+      right: 0.8vw;
+      bottom: 1vw; }
+    #box_wrap .w26 #moveSection .half .square {
+      position: absolute; }
+      #box_wrap .w26 #moveSection .half .square img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: bottom; }
   #box_wrap .w26 #moveSection .half:first-child {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -147,6 +158,12 @@
       top: 0.94vw; }
     #box_wrap .w26 #moveSection .half:last-child .lineDown {
       bottom: 1.73vw; }
+    #box_wrap .w26 #moveSection .half:last-child .box3 {
+      height: 3.91vw;
+      width: 3.91vw;
+      top: 0.42vw;
+      left: 0.42vw;
+      cursor: e-resize; }
 
 #box_wrap .w52 #portfolio {
   height: 71%;
