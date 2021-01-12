@@ -1087,9 +1087,9 @@
             max-width: 100%;
             vertical-align: bottom; }
         .vansModal .vans-container .vansView #vansContainer #vansCnt5 .framePc {
-          -webkit-border-radius: 8%;
-          -moz-border-radius: 8%;
-          border-radius: 8%;
+          -webkit-border-radius: 27px;
+          -moz-border-radius: 27px;
+          border-radius: 27px;
           border: 3px solid #000;
           position: absolute;
           top: 11.68vw;
@@ -1106,6 +1106,34 @@
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .frameM {
+          -webkit-border-radius: 29px;
+          -moz-border-radius: 29px;
+          border-radius: 29px;
+          border: 3px solid #000;
+          position: absolute;
+          top: 2.4vw;
+          left: 77.4vw;
+          width: 14.17vw;
+          height: 26.09vw; }
+      .vansModal .vans-container .vansView #vansContainer #vansCnt6 {
+        width: 100%;
+        position: relative;
+        font-family: yoon; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 .pGroup {
+          position: absolute;
+          left: 5.63vw; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansTits {
+          top: 2.34vw;
+          font-size: 1.88vw; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansSmallTits {
+          top: 4.32vw;
+          font-size: 1.04vw;
+          padding-top: 0.31vw; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .pGroup {
+          font-size: 0.7vw;
+          bottom: 3vw;
+          padding-top: 0.31vw; }
     .vansModal .vans-container .vansView .class2 {
       -webkit-background-size: cover;
       -moz-background-size: cover;
