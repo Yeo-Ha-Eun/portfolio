@@ -1,5 +1,8 @@
   
 $(document).ready(function () {
+  $('#moveSection .box2').draggable({
+    containment: '.twinkle'   //.twinkle 안에서만
+  });
 
   $('#moveSection .box3').draggable({
     axis: 'x',  //x축-가로방향
