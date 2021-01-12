@@ -134,6 +134,19 @@
     background-color: #5d9eff; }
     #box_wrap .w26 #moveSection .half:last-child p {
       color: #a1ffaa; }
+    #box_wrap .w26 #moveSection .half:last-child .halfLine {
+      width: 10.36vw;
+      height: 0.36vw;
+      position: absolute;
+      right: 1.46vw; }
+      #box_wrap .w26 #moveSection .half:last-child .halfLine img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: bottom; }
+    #box_wrap .w26 #moveSection .half:last-child .lineTop {
+      top: 0.94vw; }
+    #box_wrap .w26 #moveSection .half:last-child .lineDown {
+      bottom: 1.73vw; }
 
 #box_wrap .w52 #portfolio {
   height: 71%;
@@ -463,62 +476,52 @@
           float: left; }
         .modal .view-container .view .down .education ul p + p {
           margin-left: 3.13vw; }
-      .modal .view-container .view .down .do ul .design, .modal .view-container .view .down .do ul .coding {
-        width: 100%; }
-        .modal .view-container .view .down .do ul .design + li, .modal .view-container .view .down .do ul .coding + li {
-          margin-top: 1.41vw; }
-        .modal .view-container .view .down .do ul .design > p, .modal .view-container .view .down .do ul .coding > p {
-          margin-right: 0.5vw;
-          width: 20%; }
-        .modal .view-container .view .down .do ul .design p, .modal .view-container .view .down .do ul .coding p {
-          float: left; }
-        .modal .view-container .view .down .do ul .design ul >, .modal .view-container .view .down .do ul .coding ul > {
-          float: right;
-          width: 80%; }
-          .modal .view-container .view .down .do ul .design ul > > li, .modal .view-container .view .down .do ul .coding ul > > li {
-            width: 100%;
+      .modal .view-container .view .down .do ul {
+        /*  .design{
+             .p100{position: relative;
+                 width: 1.93vw;height: 1.98vw;
+                 p:first-child{
+                     @include transform(translateY(-80%));
+                     position: absolute;top: 50%;}
+             p:last-child{font-size: 0.52vw;position: absolute;bottom: 0;}}
+             .p70, .p60, .p50{position: relative;
+                 p{width: 100%;text-align: center;}
+                 p:first-child{
+                 @include transform(translateY(-80%));
+                 position: absolute;top: 50%;}
+             p:last-child{font-size: 0.52vw;position: absolute;bottom: 0;}}
+         }
+          */ }
+        .modal .view-container .view .down .do ul .design, .modal .view-container .view .down .do ul .coding {
+          width: 100%; }
+          .modal .view-container .view .down .do ul .design + li, .modal .view-container .view .down .do ul .coding + li {
+            margin-top: 1.41vw; }
+          .modal .view-container .view .down .do ul .design > p, .modal .view-container .view .down .do ul .coding > p {
+            margin-right: 0.5vw;
+            width: 20%; }
+          .modal .view-container .view .down .do ul .design p, .modal .view-container .view .down .do ul .coding p {
             float: left; }
-        .modal .view-container .view .down .do ul .design .percent, .modal .view-container .view .down .do ul .coding .percent {
-          width: 1.98vw;
-          display: inline-block; }
-          .modal .view-container .view .down .do ul .design .percent > p, .modal .view-container .view .down .do ul .coding .percent > p {
-            width: 100%;
-            text-align: center; }
-        .modal .view-container .view .down .do ul .design .percent + .percent, .modal .view-container .view .down .do ul .coding .percent + .percent {
-          margin-left: 0.5vw; }
-      .modal .view-container .view .down .do ul .design .p100 {
-        position: relative;
-        width: 1.93vw;
-        height: 1.98vw; }
-        .modal .view-container .view .down .do ul .design .p100 p:first-child {
-          -webkit-transform: translateY(-80%);
-          -moz-transform: translateY(-80%);
-          -o-transform: translateY(-80%);
-          -ms-transform: translateY(-80%);
-          transform: translateY(-80%);
-          position: absolute;
-          top: 50%; }
-        .modal .view-container .view .down .do ul .design .p100 p:last-child {
-          font-size: 0.52vw;
-          position: absolute;
-          bottom: 0; }
-      .modal .view-container .view .down .do ul .design .p70, .modal .view-container .view .down .do ul .design .p60, .modal .view-container .view .down .do ul .design .p50 {
-        position: relative; }
-        .modal .view-container .view .down .do ul .design .p70 p, .modal .view-container .view .down .do ul .design .p60 p, .modal .view-container .view .down .do ul .design .p50 p {
-          width: 100%;
-          text-align: center; }
-        .modal .view-container .view .down .do ul .design .p70 p:first-child, .modal .view-container .view .down .do ul .design .p60 p:first-child, .modal .view-container .view .down .do ul .design .p50 p:first-child {
-          -webkit-transform: translateY(-80%);
-          -moz-transform: translateY(-80%);
-          -o-transform: translateY(-80%);
-          -ms-transform: translateY(-80%);
-          transform: translateY(-80%);
-          position: absolute;
-          top: 50%; }
-        .modal .view-container .view .down .do ul .design .p70 p:last-child, .modal .view-container .view .down .do ul .design .p60 p:last-child, .modal .view-container .view .down .do ul .design .p50 p:last-child {
-          font-size: 0.52vw;
-          position: absolute;
-          bottom: 0; }
+          .modal .view-container .view .down .do ul .design ul >, .modal .view-container .view .down .do ul .coding ul > {
+            float: right;
+            width: 80%; }
+            .modal .view-container .view .down .do ul .design ul > > li, .modal .view-container .view .down .do ul .coding ul > > li {
+              width: 100%;
+              float: left; }
+          .modal .view-container .view .down .do ul .design .percent, .modal .view-container .view .down .do ul .coding .percent {
+            width: 1.98vw;
+            display: inline-block; }
+            .modal .view-container .view .down .do ul .design .percent > p, .modal .view-container .view .down .do ul .coding .percent > p {
+              width: 100%;
+              text-align: center; }
+          .modal .view-container .view .down .do ul .design .percent + .percent, .modal .view-container .view .down .do ul .coding .percent + .percent {
+            margin-left: 0.5vw; }
+        .modal .view-container .view .down .do ul .design {
+          width: 100%; }
+          .modal .view-container .view .down .do ul .design .p50 {
+            float: right;
+            margin-top: 0.6vw; }
+        .modal .view-container .view .down .do ul .Max {
+          margin-right: 1.3vw; }
     .modal .view-container .view .class {
       -webkit-background-size: cover;
       -moz-background-size: cover;

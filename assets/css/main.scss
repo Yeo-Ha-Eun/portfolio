@@ -63,6 +63,11 @@
     .half:last-child{
         background-color:#5d9eff;
         p{color: #a1ffaa;}
+        .halfLine{width: 10.36vw;height: 0.36vw;position: absolute;right: 1.46vw;
+            img{height: auto;max-width: 100%;vertical-align: bottom;}
+        }
+        .lineTop{top: 0.94vw;}
+        .lineDown{bottom: 1.73vw;}
     }//16px=0.8vw
     }
 }
@@ -210,7 +215,12 @@
                             >p{width: 100%;text-align: center;}}
                             .percent+.percent{margin-left: 0.5vw;}
                         }
-                        .design{
+                        .design{width: 100%;
+                            .p50{float: right;margin-top: 0.6vw;}
+                            
+                        }
+                        .Max{margin-right: 1.3vw;}
+                       /*  .design{
                             .p100{position: relative;
                                 width: 1.93vw;height: 1.98vw;
                                 p:first-child{
@@ -224,7 +234,7 @@
                                 position: absolute;top: 50%;}
                             p:last-child{font-size: 0.52vw;position: absolute;bottom: 0;}}
                         }
-                        
+                         */
                     }
                 }
             } 
