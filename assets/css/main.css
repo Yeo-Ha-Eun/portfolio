@@ -187,7 +187,8 @@
   position: relative;
   width: 100%;
   height: 29vh;
-  perspective: 100vw; }
+  perspective: 100vw;
+  z-index: 10; }
   #box_wrap .w52 .card .front {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -331,7 +332,8 @@
   width: 100%;
   height: 100%;
   visibility: hidden;
-  opacity: 0; }
+  opacity: 0;
+  z-index: 200; }
   .modal .background {
     position: fixed;
     width: 100%;
@@ -485,13 +487,9 @@
         .modal .view-container .view .down .do ul .design .percent + .percent, .modal .view-container .view .down .do ul .coding .percent + .percent {
           margin-left: 0.5vw; }
       .modal .view-container .view .down .do ul .design .p100 {
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
         position: relative;
         width: 1.93vw;
-        height: 1.98vw;
-        background: #ff7800; }
+        height: 1.98vw; }
         .modal .view-container .view .down .do ul .design .p100 p:first-child {
           -webkit-transform: translateY(-80%);
           -moz-transform: translateY(-80%);
@@ -504,12 +502,6 @@
           font-size: 0.52vw;
           position: absolute;
           bottom: 0; }
-      .modal .view-container .view .down .do ul .design .orangeTop {
-        width: 1.93vw; }
-        .modal .view-container .view .down .do ul .design .orangeTop img {
-          height: auto;
-          max-width: 100%;
-          vertical-align: bottom; }
       .modal .view-container .view .down .do ul .design .p70, .modal .view-container .view .down .do ul .design .p60, .modal .view-container .view .down .do ul .design .p50 {
         position: relative; }
         .modal .view-container .view .down .do ul .design .p70 p, .modal .view-container .view .down .do ul .design .p60 p, .modal .view-container .view .down .do ul .design .p50 p {
@@ -543,6 +535,7 @@
   0%, 100% {
     transform: translateY(-100%); } }
 .vansModal {
+  z-index: 200;
   position: fixed;
   top: 0;
   left: 0;
@@ -575,7 +568,8 @@
       color: #1800fd;
       line-height: 6.57vh;
       background: #fff;
-      border: 3px solid #000; }
+      border: 3px solid #000;
+      z-index: 400; }
       .vansModal .vans-container .vansView .headerVans h2 {
         margin-left: 1.5vw;
         display: inline-block; }
@@ -1119,21 +1113,137 @@
       .vansModal .vans-container .vansView #vansContainer #vansCnt6 {
         width: 100%;
         position: relative;
-        font-family: yoon; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 .pGroup {
+        font-family: yoon;
+        z-index: 350; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div {
+          width: 30%; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup {
+            position: absolute;
+            left: 5.63vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansTits {
+            top: 2.34vw;
+            font-size: 1.88vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansSmallTits {
+            top: 4.32vw;
+            font-size: 1.04vw;
+            padding-top: 0.31vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup {
+            font-size: 0.7vw;
+            bottom: 12vw;
+            padding-top: 0.31vw;
+            word-break: keep-all; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup p {
+              line-height: 1.56vw; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup p + p {
+              padding-top: 1.6vw; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap {
+          width: 70%;
           position: absolute;
-          left: 5.63vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansTits {
-          top: 2.34vw;
-          font-size: 1.88vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .vansSmallTits {
-          top: 4.32vw;
-          font-size: 1.04vw;
-          padding-top: 0.31vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .pGroup {
-          font-size: 0.7vw;
-          bottom: 3vw;
-          padding-top: 0.31vw; }
+          left: 38vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul {
+            width: 100%;
+            position: absolute;
+            top: -1vw;
+            left: 10vw; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li {
+              position: absolute; }
+              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li p {
+                font-size: 0.7vw;
+                position: absolute;
+                left: 0; }
+              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li > div {
+                position: absolute;
+                left: 0; }
+                .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li > div img {
+                  height: auto;
+                  max-width: 100%;
+                  vertical-align: bottom; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:first-child p {
+              top: 0vw; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:first-child > div {
+              width: 49.16vw;
+              height: 14.58vw;
+              position: absolute;
+              left: -0.5vw; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) {
+              top: 12.5vw; }
+              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) p {
+                top: 0vw; }
+              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) > div {
+                width: 47.39vw;
+                height: 13.7vw; }
+            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:last-child {
+              top: 26vw; }
+              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:last-child p {
+                top: 0vw; }
+              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:last-child > div {
+                width: 47.39vw;
+                height: 12.34vw; }
+      .vansModal .vans-container .vansView #vansContainer #vansCnt7 {
+        width: 100%;
+        position: relative;
+        font-family: yoon; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg {
+          overflow: hidden; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p {
+            -webkit-transform: rotate(-10deg);
+            -moz-transform: rotate(-10deg);
+            -o-transform: rotate(-10deg);
+            -ms-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+            position: absolute;
+            font-size: 1.56vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(1) {
+            top: -9vw;
+            left: -2vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(2) {
+            top: 4vw;
+            left: -2vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(3) {
+            width: 110%;
+            top: 30vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(4) {
+            top: 45vw;
+            left: 2vw;
+            width: 110%; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(5) {
+            top: -1vw;
+            left: -2vw;
+            width: 110%; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt7 .macbook {
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 44%;
+          left: 50%;
+          width: 58.11vw;
+          height: 36.46vw; }
+          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .macbook img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt7 a {
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 1.56vw;
+          background: #fff;
+          border: 3px solid #000;
+          width: 11.67vw;
+          height: 3.28vw;
+          line-height: 3.28vw;
+          text-align: center; }
+        .vansModal .vans-container .vansView #vansContainer #vansCnt7 a:hover, .vansModal .vans-container .vansView #vansContainer #vansCnt7 a.focus {
+          background: #000;
+          color: #fff; }
     .vansModal .vans-container .vansView .class2 {
       -webkit-background-size: cover;
       -moz-background-size: cover;

@@ -85,7 +85,7 @@
     }
     }
     .card{
-        position: relative;width: 100%;height: 29vh; perspective: 100vw;
+        position: relative;width: 100%;height: 29vh; perspective: 100vw;z-index: 10;
         .front{
             @include bgsize(cover);
             background: url("../images/index/yoda.jpg") no-repeat center;height:  29vh;width: 100%;
@@ -142,7 +142,7 @@
 }
 
 .modal{
-    position: fixed;top: 0;left: 0;width: 100%;height: 100%; visibility: hidden;opacity: 0;
+    position: fixed;top: 0;left: 0;width: 100%;height: 100%; visibility: hidden;opacity: 0;z-index: 200;
     
     .background{
         position: fixed;width: 100%;height: 100%;left: 0;top: 0;background-color: #000; opacity: 0.5;
@@ -211,17 +211,12 @@
                             .percent+.percent{margin-left: 0.5vw;}
                         }
                         .design{
-                            .p100{
-                                @include border-radius(50%);position: relative;
-                                width: 1.93vw;height: 1.98vw;background: #ff7800;
+                            .p100{position: relative;
+                                width: 1.93vw;height: 1.98vw;
                                 p:first-child{
                                     @include transform(translateY(-80%));
                                     position: absolute;top: 50%;}
                             p:last-child{font-size: 0.52vw;position: absolute;bottom: 0;}}
-                            .orangeTop{
-                                width: 1.93vw;
-                                img{height: auto;max-width: 100%;vertical-align: bottom;}
-                            }
                             .p70, .p60, .p50{position: relative;
                                 p{width: 100%;text-align: center;}
                                 p:first-child{
@@ -246,7 +241,7 @@
     0%, 100%{transform:translateY(-100%);}
  }
 
-.vansModal{
+.vansModal{z-index: 200;
     position: fixed;top: 0;left: 0;width: 100%;height: 100%; visibility: hidden;opacity: 0;
     .vans-container{
         .vansView{
@@ -255,7 +250,7 @@
             position:fixed;z-index: 300;top: 0;left: 0;width: 100%;
             .headerVans{
                 @include border-box;
-                height: 6.57vh;width: 100%;font-size: 1.56vw;color: #1800fd;line-height: 6.57vh;background: #fff;border: 3px solid #000;
+                height: 6.57vh;width: 100%;font-size: 1.56vw;color: #1800fd;line-height: 6.57vh;background: #fff;border: 3px solid #000;z-index: 400;
                 h2{margin-left: 1.5vw;display: inline-block;}
             }
             .bottomVans{
@@ -478,13 +473,62 @@
                             border: 3px solid #000;position: absolute;top: 2.4vw;left: 77.4vw;width: 14.17vw;height: 26.09vw;}
     
                     }
-                    #vansCnt6{width: 100%;position: relative;font-family: yoon;
-                        .vansTits, .vansSmallTits,.pGroup{position: absolute;left: 5.63vw;}
+                    #vansCnt6{width: 100%;position: relative;font-family: yoon;z-index: 350;
+                        >div{width: 30%;
+                            .vansTits, .vansSmallTits,.pGroup{position: absolute;left: 5.63vw;}
                         .vansTits{top:2.34vw;font-size: 1.88vw;}
                         .vansSmallTits{top:4.32vw;font-size: 1.04vw; padding-top: 0.31vw;}
-                        .pGroup{font-size: 0.7vw;bottom: 3vw; padding-top: 0.31vw;}
-
+                        .pGroup{font-size: 0.7vw;bottom: 12vw ;padding-top: 0.31vw;word-break: keep-all;
+                            p{line-height: 1.56vw;}
+                            p+p{padding-top: 1.6vw;}
+                        }
                     }
+                    .codingWrap{width: 70%;position: absolute;left: 38vw;
+                        ul{width: 100%;position: absolute;top: -1vw;left: 10vw;
+                            li{position: absolute;
+                                p{font-size: 0.7vw;position: absolute;left: 0;}
+                            >div{position:absolute;left: 0;
+                                img{height: auto;max-width: 100%;vertical-align: bottom;}
+                            }
+                        }
+                        li:first-child{
+                            p{top: 0vw;}
+                            >div{width: 49.16vw;height: 14.58vw;position: absolute;left: -0.5vw;}
+                        }
+                        li:nth-child(2){
+                            top: 12.5vw;
+                            p{top: 0vw;}
+                            >div{width: 47.39vw;height: 13.7vw;}
+                        }
+                        li:last-child{
+                            top: 26vw;
+                            p{top: 0vw;}
+                            >div{width: 47.39vw;height: 12.34vw;}
+                            }
+                        }
+                    }
+                }
+                #vansCnt7{width: 100%;position: relative;    font-family: yoon;
+                    .vansCnt7Bg{overflow: hidden;
+                        p{
+                            @include transform(rotate(-10deg));
+                            position: absolute;font-size: 1.56vw;
+                        }
+                        p:nth-child(1){top: -9vw;left: -2vw;}
+                        p:nth-child(2){top: 4vw;left: -2vw;}
+                        p:nth-child(3){width: 110%;top: 30vw;}
+                        p:nth-child(4){top: 45vw;left: 2vw;width: 110%;}
+                        p:nth-child(5){top: -1vw;left: -2vw;width: 110%;}
+                    }
+                    .macbook{
+                        @include transform(translate(-50%, -50%));
+                        position: absolute;top: 44%;left: 50%;width: 58.11vw;height: 36.46vw;
+                        img{height: auto;max-width: 100%;vertical-align: bottom;}
+                    }
+                    a{@include transform(translate(-50%, -50%));
+                        position: absolute;top: 50%;left: 50%;font-size: 1.56vw;background: #fff;border: 3px solid #000;width: 11.67vw;height: 3.28vw;line-height: 3.28vw;text-align: center;}
+                    a:hover, a.focus{background: #000;color: #fff}
+                }
 }
         .class2{
             @include bgsize(cover);
