@@ -30,7 +30,7 @@ $(document).ready(function () {
   //가로 스크롤
   var $win = $(window);
     var $menu = $('#vansIndicator ul li');
-    var $cntWrap = $('#vansContainer .vansCnt_wrap');
+    var $cntWrap = $('.pjContainer .vansCnt_wrap');
     var tgIdx = 0;  //로딩시 보여지는 섹션의 인덱스 번호, 인디케이터의 활성화 번호
     var total = $cntWrap.children().size(); //섹션의 전체 개수
     var winWidth;   //window의 가로크기를 저장할 전역변수
@@ -241,9 +241,8 @@ $('#aboutWrap .smile').on('click', function (e) {
     //1) 필요한 변수 선언
     var _openBtn2 = $(this); //모달 닫기 버튼 클릭시 포커스 강제 이동을 위해
     var _mdCnt2 = $( $(this).data('target') );
-    //console.log(_mdCnt, typeof _mdCnt); //string타입을 $()로 감싸서 선택자로 변경함 
-    var _closeBtn2 = _mdCnt2.find('.class2');
-    var timer2 = 0;
+    //console.log(_mdCnt2, typeof _mdCnt2); //string타입을 $()로 감싸서 선택자로 변경함 
+    var _closeBtn2 = _mdCnt2.find('.last');
     var _first = _mdCnt2.find('.first');
     var _last = _mdCnt2.find('.last');
   
@@ -252,7 +251,7 @@ $('#aboutWrap .smile').on('click', function (e) {
   
     //modal3) 모달 컨텐츠를 보여지게 처리, 첫번째 링크에 포커스 강제 이동
     _mdCnt2.css('visibility', 'visible').stop().animate({opacity: 1}, function () {
-      _closeBtn.focus();
+      _closeBtn2.focus();
     });
   
     //modal4) 접근성을 위해 추가 : 닫기 버튼을 누르기 전까지 포커스는 모달 내부에 존재해야 함
@@ -286,29 +285,20 @@ $('#aboutWrap .smile').on('click', function (e) {
       _openBtn2.focus();
     });
   
-        //esc 키보드를 누른 경우도 닫겨진다
+    //esc 키보드를 누른 경우도 닫겨진다
     $(window).on('keydown', function (e) {
       //console.log(e.keyCode); //esc 27
       if (e.keyCode === 27) _closeBtn2.click();
     });
   });
 
-//vans 가로 스크롤
- //1) 초기 설정 : 인디케이터 첫번째 li.on  클래스 추가하여 활성화
- $menu.eq(0).addClass('on');
+  //vans 가로 스크롤
+  //1) 초기 설정 : 인디케이터 첫번째 li.on  클래스 추가하여 활성화
+  $menu.eq(0).addClass('on');
 
- //2) resize 이벤트 : .cnt_wrap과 섹션의 가로 크기 css()
- $win.on('resize', function () {
-     clearTimeout(timerResize);
-
-     timerResize = setTimeout(function () {
-         winWidth = $win.width();
-         $cntWrap.css('width', winWidth * total).children().css('width', winWidth);
-
-         //창사이즈에 변화가 생길때 현재 활성화된 섹션이 잘 보여지도록 애니메이트 추가 처리
-     }, 100);
- });
- $win.trigger('resize');
+  //2) resize 이벤트 : 없어도 된다 모달창의 크기가 100%여서 위치는 항상 top0, left0이다
+  winWidth = $win.width();
+  $cntWrap.css('width', winWidth * total).children().css('width', winWidth);
 
  //3) 인디케이터 클릭 이벤트
  $menu.children().on('click', function (e) {
@@ -317,7 +307,7 @@ $('#aboutWrap .smile').on('click', function (e) {
      //3-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
      if ( $cntWrap.is(':animated') ) return false;
      tgIdx = $(this).parent().index(); //인디케이터 li의 인덱스번호
-     console.log(tgIdx);
+     //console.log(tgIdx);
      //3-2) 클릭한 인디케이터가 활성화
      $(this).parent().addClass('on').siblings().removeClass('on');
      //3-3) 애니메이트(.cnt_wrap)
@@ -377,5 +367,20 @@ $('#aboutWrap .smile').on('click', function (e) {
      $menu.eq(tgIdx).addClass('on').siblings().removeClass('on');
      $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
  });
+
+ //6) 이전과 다음 버튼 클릭 이벤트 :if : 다음, else if : 이전
+  $('.pjModal .controler button').on('click', function (e) {
+    //5-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
+    if ( $cntWrap.is(':animated') ) return false;
+
+    //5-2) if : 다음, else if : 이전 => tgIdx제어
+    var btnNum=$(this).parent().index();
+    if (btnNum === 1 && tgIdx < total - 1) tgIdx++;
+    else if (btnNum === 0 && tgIdx > 0) tgIdx--;
+
+    //5-3) 인디케이터 활성 , .cnt_wrap 애니메이션
+    $menu.eq(tgIdx).addClass('on').siblings().removeClass('on');
+    $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
+  });
  
 });
