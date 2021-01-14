@@ -91,6 +91,15 @@ $(document).ready(function () {
   //디지털시계3) 시간간격 1초 마다 clock 함수를 반복적으로 동작
   var timer =setInterval(clock, 1000);
 
+  $(document).mousemove(function(e){
+
+   
+
+ });
+
+
+
+출처: https://tren-d.tistory.com/entry/jQuery-마우스-커서-좌표-값-구하기 [트렌디:)]
   // resize 될때 스마일박스의 시작위치, 바람개비 크기와 위치 설정, 튕기는 볼의 움직이는 범위 제어
   $(window).on('resize', function () {
       circleWid = $('#aboutWrap .circle').width(); 
@@ -109,7 +118,13 @@ $(document).ready(function () {
       //console.log(x, y);
       $(this).find('.verline').css('left', x); //세로라인 : top은 0으로 고정되고 left만 마우스의 x좌표로 업데이트
       $(this).find('.horline').css('top', y);
-      $(this).find('.circle').css({left: x - circleWid*0.5, top: y - circleWid*0.5});        
+      $(this).find('.circle').css({left: x - circleWid*0.5, top: y - circleWid*0.5});  
+      
+      var positionTxt = '<p>X</p>';
+      positionTxt += '<p>' + x + '</p>';
+      positionTxt += '<p>Y</p>';
+      positionTxt += '<p>' + y + '</p>';
+      $('.position').html('').append(positionTxt);
   });
 
   //flip : 전화번호 키보드 제어 접근성 추가

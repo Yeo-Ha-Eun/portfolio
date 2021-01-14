@@ -101,7 +101,10 @@
       top: 10%; }
   #box_wrap .w26 #aboutWrap .position {
     height: 9%;
-    border-top: 1px solid #fffabf; }
+    border-top: 1px solid #fffabf;
+    display: flex; }
+    #box_wrap .w26 #aboutWrap .position p {
+      width: 25%; }
 #box_wrap .w26 #moveSection {
   font-size: 0.8vw;
   height: 29%; }
