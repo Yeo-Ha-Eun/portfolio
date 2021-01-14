@@ -119,11 +119,13 @@ $(document).ready(function () {
       $(this).find('.verline').css('left', x); //세로라인 : top은 0으로 고정되고 left만 마우스의 x좌표로 업데이트
       $(this).find('.horline').css('top', y);
       $(this).find('.circle').css({left: x - circleWid*0.5, top: y - circleWid*0.5});  
+      console.log(x, y);
       
       var positionTxt = '<p>X</p>';
+      /* positionTxt.css({'margin-left' : '4%'}); */
       positionTxt += '<p>' + x + '</p>';
       positionTxt += '<p>Y</p>';
-      positionTxt += '<p>' + y + '</p>';
+      positionTxt += '<p>' + Math.floor(y) + '</p>';
       $('.position').html('').append(positionTxt);
   });
 
