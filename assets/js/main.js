@@ -29,8 +29,8 @@ $(document).ready(function () {
 
   //가로 스크롤
   var $win = $(window);
-    var $menu = $('#vansIndicator ul li');
-    var $cntWrap = $('.pjContainer .vansCnt_wrap');
+    var $menu = $('.indicator ul li');
+    var $cntWrap = $('.pjContainer .pj_wrap');
     var tgIdx = 0;  //로딩시 보여지는 섹션의 인덱스 번호, 인디케이터의 활성화 번호
     var total = $cntWrap.children().size(); //섹션의 전체 개수
     var winWidth;   //window의 가로크기를 저장할 전역변수
