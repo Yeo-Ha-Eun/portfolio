@@ -262,19 +262,19 @@
     0%, 100%{transform:translateY(-100%);}
  }
 
-.vansModal{z-index: 200;
+.pjModal{z-index: 200;
     position: fixed;top: 0;left: 0;width: 100%;height: 100%; visibility: hidden;opacity: 0;
-    .vans-container{
-        .vansView{
+    .pj-container{
+        .pjView{
             @include transition(all 1s ease-in-out);
             @include transform(translateY(0%));
             position:fixed;z-index: 300;top: 0;left: 0;width: 100%;
-            .headerVans{
+            .pj-header{
                 @include border-box;
                 height: 6.57vh;width: 100%;font-size: 1.56vw;color: #1800fd;line-height: 6.57vh;background: #fff;border: 3px solid #000;z-index: 400;
                 h2{margin-left: 1.5vw;display: inline-block;}
             }
-            .bottomVans{
+            .pj-bottom{
                 @include border-box;
                 position:fixed;top: 88.89vh;left: 0;border: 3px solid #000;height: 11.11vh;width: 100%;background: #fff;z-index: 400;
                 
@@ -322,7 +322,7 @@
                }
             }      
     }
-            #vansContainer, #vansContainer .vansCnt_wrap, #vansContainer .vansCnt_wrap section{height: 100%;background: #fff;}
+            .pjContainer, .pjContainer .pj_wrap, .pjContainer .pj_wrap section{height: 100%;background: #fff;}
             #vansContainer{width: 100%;overflow: hidden;
                 .vansCnt_wrap{height: 82.32vh;
                     section{float: left;padding-top: 3.7vw;padding-bottom: 6.25vw;/* border-left: 3px solid #000;border-right:3px solid #000; */
@@ -551,6 +551,30 @@
                     a:hover, a.focus{background: #000;color: #fff}
                 }
 }
+            #danContainer{width: 100%;overflow: hidden;
+                .danCnt_wrap{
+                    height: 82.32vh;
+                    section{float: left;padding-top: 3.7vw;padding-bottom: 6.25vw;
+                }
+            }
+            #danCnt1{width: 100%;position: relative;background: #fff;
+               .danSquare{position: absolute;top: 0;left: 0;
+                width: 56.95vw;height: 100%;
+                img{height: auto;max-width: 100%;vertical-align: bottom;}
+            } 
+                .danMoblie{position: absolute;top: 0;right: 0;height: 100%;width: 65.1vw;
+                    img{height: auto;max-width: 100%;vertical-align: bottom;}
+                }
+                h2{
+                    @include transform(skewY(32deg));position: absolute;top: 10vw;left: 11%;font-size: 2.8vw;
+                    line-height: 5vw;
+                }
+                p{
+                    @include transform(skewY(32deg));position: absolute;top: 26vw;left: 11%;
+                    font-size: 1vw;letter-spacing: 0.35vw;font-family: yoon;
+                }
+            }
+        }
         .class2{
             @include bgsize(cover);
             background: url("../images/about_me/x.png") no-repeat center;position: absolute;right: 0;border-left: 3px solid #000;top: 0;width:6.57vh;height: 6.57vh;

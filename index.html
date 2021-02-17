@@ -86,7 +86,7 @@
                             <button type="button" data-target="#vansModal" class="vansRenewal">VANS RENEWAL</button>
                         </li>
                         <li class="f_r half">
-                            <button type="button" >DAN PROJECT</button>
+                            <button type="button" data-target="#danModal" class="danProject">DAN PROJECT</button>
                         </li>
                         <li class="f_l half">
                             <button type="button" >GRAPIC DESIGN</button>
@@ -266,10 +266,10 @@
         <div>
             <div class="vans-container pj-container">
                 <div class="vansView pjView">
-                    <div class="headerVans">
+                    <div class="headerVans pj-header">
                         <h2>VANS RENEWAL PROJECT</h2>
                     </div>
-                    <div class="bottomVans">
+                    <div class="bottomVans pj-bottom">
                         <div>
                             <div class="indicator" id="vansIndicator">
                                 <ul>
@@ -562,6 +562,281 @@
                                     <a href="https://yeo-ha-eun.github.io/vans_project/" target="_blank">View Page</a>
                                 
                             </section>
+                        </div>
+                    </div>
+                    <button type="button" class="class2 last">
+                        <span class="blind-b">close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="danModal pjModal" id="danModal">
+        <div>
+            <div class="dan-container pj-container">
+                <div class="danView pjView">
+                    <div class="headerDan pj-header">
+                        <h2>DAN PROJECT</h2>
+                    </div>
+                    <div class="bottomDan pj-bottom">
+                        <div>
+                            <div class="indicator" id="danIndicator">
+                                <ul>
+                                    <li>
+                                        <button class="first" type="button" data-href="#danCnt1">
+                                            <span class="txt">DAN INTRO</span>
+                                            <span class="icon"></span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" data-href="#danCnt2">
+                                            <span class="txt">VIEW PAGE
+                                            </span>
+                                            <span class="icon"></span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="controler">
+                                <div>
+                                    <button type="button" class="prev">
+                                        <img src="assets/images/uxui/VANS/left.png" onmouseover="this.src='assets/images/uxui/VANS/leftHover.png';"
+                                        onmouseout="this.src='assets/images/uxui/VANS/left.png';" alt="이전페이지보기">
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type="button" class="next">
+                                        <img src="assets/images/uxui/VANS/right.png" onmouseover="this.src='assets/images/uxui/VANS/rightHovrt.png';"
+                                        onmouseout="this.src='assets/images/uxui/VANS/right.png';" alt="다음페이지보기">
+                                    </button>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div id="danContainer" class="pjContainer">
+                        <div class="danCnt_wrap pj_wrap">
+                            <section id="danCnt1">
+                                <div class="danSquare">
+                                    <img src="assets/images/uxui/dan/bgSquare.png" alt="">
+                                </div>
+                                <div class="danMoblie">
+                                    <img src="assets/images/uxui/dan/indexIphone.png" alt="dan이 실행되고있는 아이폰들">
+                                </div>
+                                <h2>PROJECT<br>DAN</h2>
+                                <P class="period">2020 10 19 - 11 12</P> 
+                            </section>
+                            <!-- <section id="vansCnt2">
+                                <h2 class="vansTits">Advantage</h2>
+                                <p class="vansSmallTits">Custom</p>
+                                <p class="plain">커스텀 스케이트 보드화와 선택의 폭이 넓은 신발종류<br> : 장점이지만 홈페이지에서는 잘 살려주고 있지 않다.</p>
+                                <ul class="shoeWrap">
+                                    <li class="f_l">
+                                        <div class="whiteEra">
+                                            <img src="assets/images/uxui/VANS/whiteEra.png" alt="기본era신발">
+                                        </div>
+                                    </li>
+                                    <li class="f_r">
+                                        <div class="whiteslip-on">
+                                            <img src="assets/images/uxui/VANS/whiteSlipon.png" alt="기본slip-on신발">
+                                        </div>
+                                    </li>
+                                    <li class="f_l">
+                                        <div class="era">
+                                            <img src="assets/images/uxui/VANS/era.png" alt="custom  era신발">
+                                        </div>
+                                    </li>
+                                    <li class="f_r">
+                                        <div class="slip-on">
+                                            <img src="assets/images/uxui/VANS/slipOn.png" alt="custom slip-on신발">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="pointer">
+                                    <img src="assets/images/uxui/VANS/pointer.png" alt="화살표">
+                                </div>
+                                <div class="cnt2Right f_r">
+                                    <div>
+                                        <img src="assets/images/uxui/VANS/pageTwoMain.png" alt="vansPc화면">
+                                    </div>
+                                    <ul class="cnt2Plain">
+                                        <li>
+                                            <div>
+                                                <div class="subLine"></div>
+                                                <p>1</p>
+                                            </div>
+                                            <div class="customPic">
+                                                <img src="assets/images/uxui/VANS/custom.png" alt="custom버튼">
+                                            </div>
+                                            <p>INDEX화면에 바로<br>CUSTOM 버튼을 노출시켰다.</p>
+                                        </li>
+                                        <li class="cntTwoTwo">
+                                            <div>
+                                                <div class="subLine"></div>
+                                                <p>2</p>
+                                            </div>
+                                            <p>취향에 맞는 신발종류를 바로 찾을 수 있는 <br>섹션을 기획했다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="vansCnt3">
+                                <h2 class="vansTits">Advantage</h2>
+                                <p class="vansSmallTits">Collaboration & Collection</p>
+                                <p  class="plain">다양한 분야의 사람들과 콜라보레이션 하는 경우가 많고,<br>여러 콜렉션 라인들도 계속해서 나오는데에 비해 홈페이지가 노출되지 않는 느낌이다.</p>
+                                <div class="cnt3CollecionPic">
+                                    <p class="plain2">현재 반스에서 진행중인 콜렉션 라인</p>
+                                    <div>
+                                        <img src="assets/images/uxui/VANS/pageThirdSub.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="pointer">
+                                    <img src="assets/images/uxui/VANS/pointer.png" alt="화살표">
+                                </div>
+                                <div class="cnt3Right f_r">
+                                    <div>
+                                        <img src="assets/images/uxui/VANS/pageThirdMain.png" alt="">
+                                    </div>
+                                    <ul class="cnt3Plain">
+                                        <li>
+                                            <div>
+                                                <div class="subLine"></div>
+                                                <p>1</p>
+                                            </div>
+                                            <p>bxSlider로 현재 반스에서 진행 중인 콜렉션을 차례로 보여주었다.</p>
+                                        </li>
+                                        <li class="cnt3Two">
+                                            <div>
+                                                <div class="subLine"></div>
+                                                <p>2</p>
+                                            </div>
+                                            <p>진행 중인 콜렉션의 룩북을 인덱스 페이지에서도 볼 수 있게 구성해 주었다.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="vansCnt4">
+                                <h2 class="vansTits">Design Concept</h2>
+                                <p class="vansSmallTits">Vans의 아이덴티티를 보여주기 위한 4가지 요소</p>
+                                <div class="visualIdentity">
+                                    <h3>Identity</h3>
+                                    <p>Street Mood</p>
+                                    <p>Visual Delights</p>
+                                    <p>personality expressed</p>
+                                </div>
+                                <ul class="element">
+                                    <li class="tex">
+                                        <h3 class="fourElement">Texture</h3>
+                                        <div class="infoLine"></div>
+                                        <p>Street Mood</p>
+                                    </li>
+                                    <li class="ill">
+                                        <h3 class="fourElement">Illustration</h3> 
+                                        <div class="infoLine"></div>
+                                        <p>Visual Delights</p>
+                                        <p>personality expressed</p>
+                                    </li>
+                                    <li class="graffi">
+                                        <h3 class="fourElement">Graffiti Art</h3>
+                                        <div class="infoLine"></div>
+                                        <p>Street Mood</p>
+                                        <p>Visual Delights</p>
+                                        <p>personality expressed</p>
+                                        
+                                    </li>
+                                    <li class="clearfix colors">
+                                        <h3 class="fourElement">Colors</h3>
+                                        <div class="infoLine"></div>
+                                        <p>Visual Delights</p>
+                                        <p>personality expressed</p>
+                                        <ul class="colorChip">
+                                            <li class="f_l">
+                                                <div class="black"></div>
+                                            </li>
+                                            <li class="f_l">
+                                                <div class="white"></div>
+                                            </li>
+                                            <li class="f_l">
+                                                <div class="blue"></div>
+                                            </li>
+                                            <li class="f_l">
+                                                <div class="green"></div>
+                                            </li>
+                                            <li class="f_l">
+                                                <div class="red"></div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div class="cnt4Pc">
+                                    <img src="assets/images/uxui/VANS/pageFour.png" alt="vansPc화면">
+                                </div>
+                            </section>
+                            <section id="vansCnt5">
+                                <h2 class="vansTits">Responsive web</h2>
+                                <p class="vansSmallTits">PC - Mobile</p>
+                                <p class="plain">1920 x 1080 (pc) - 320 x 568 (mobile)까지 모두 지원하고 있다.</p>
+                                <div>
+                                    <div class="cnt5Pc">
+                                        <img src="assets/images/uxui/VANS/fivePc.png" alt="vansPc화면">
+                                    </div>
+                                    <div class="framePc"></div>
+                                    <div class="cnt5Moblie">
+                                        <img src="assets/images/uxui/VANS/fiveMoblie.png" alt="vansMobile화면">
+                                    </div>
+                                    <div class="frameM"></div>
+                                </div>
+                            </section>
+                            <section id="vansCnt6">
+                                <div>
+                                    <h2 class="vansTits">Accessibility</h2>
+                                    <p class="vansSmallTits">접근성 지침</p>
+                                    <span class="pGroup">
+                                        <p>대표적으로 아코디언 형식의 바료가기 영역이 있습니다.</p>
+                                        <p>
+                                            h2태그를 이용하여 현재 패널의 제목을 넣어 주었으며,<br>또한 자바스크립트에서 aria-expanded/aria-disabled 속성이 활성화 / 비활성화<br>되게 해주었습니다.
+                                        </p>
+                                        <p>마찬가지로 다른 영역들에서도 접근성을 지켜주기 위해서 노력하였습니다.</p>
+                                    </span>
+                                </div>
+                                <div class="codingWrap">
+                                    <ul>
+                                        <li>
+                                            <p>화면의 아코디언</p>
+                                            <div>
+                                                <img src="assets/images/uxui/VANS/accodian.png" alt="accodian화면"> 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>html 문서</p>
+                                            <div>
+                                                <img src="assets/images/uxui/VANS/html.png" alt="accodian의 html">   
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p>javascript 문서</p>
+                                            <div>
+                                                <img src="assets/images/uxui/VANS/js.png" alt="accodian의 자바스크립트">   
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section id="vansCnt7">
+                                <div class="vansCnt7Bg">
+                                    <p>VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL </p>
+                                    <p>VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  </p>
+                                    <p>VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL </p>
+                                    <p>VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL </p>
+                                    <p>VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL  VANS OFF THE WALL </p>
+                                </div>
+                                    <div class="macbook">
+                                        <img src="assets/images/uxui/VANS/viewWeb.png" alt="">
+                                    </div>
+                                    <a href="https://yeo-ha-eun.github.io/vans_project/" target="_blank">View Page</a>
+                                
+                            </section> -->
                         </div>
                     </div>
                     <button type="button" class="class2 last">

@@ -308,7 +308,60 @@ $('#aboutWrap .smile').on('click', function (e) {
       if (e.keyCode === 27) _closeBtn2.click();
     });
   });
+  $('#portfolio .danProject').on('click', function (e) {
+    //1) 필요한 변수 선언
+    var _openBtn3 = $(this); //모달 닫기 버튼 클릭시 포커스 강제 이동을 위해
+    var _mdCnt3 = $( $(this).data('target') );
+    //console.log(_mdCnt2, typeof _mdCnt2); //string타입을 $()로 감싸서 선택자로 변경함 
+    var _closeBtn3 = _mdCnt3.find('.last');
+    var _first2 = _mdCnt3.find('.first');
+    var _last2 = _mdCnt3.find('.last');
+  
+    //modal2) 스크린리더에서는 열려진 모달 말고는 접근하지 못하도록 제어(보조기술이 미구현 되어서 추가해 줌) aria-hidden="true" inert(비활성, 불활성)
+    _mdCnt3.siblings().attr({'aria-hidden': true, inert: true});
+  
+    //modal3) 모달 컨텐츠를 보여지게 처리, 첫번째 링크에 포커스 강제 이동
+    _mdCnt3.css('visibility', 'visible').stop().animate({opacity: 1}, function () {
+      _closeBtn3.focus();
+    });
+  
+    //modal4) 접근성을 위해 추가 : 닫기 버튼을 누르기 전까지 포커스는 모달 내부에 존재해야 함
+    //닫기버튼에서 shift+tab / shift(X)+tab을 누르면 포커스는 자신에게만 강제이동
+    _first2.on('keydown', function (e) {
+      //console.log(e.keyCode); //tab 9
+      if (e.shiftKey && e.keyCode === 9) {
+        e.preventDefault();   //이전으로 되돌아가는 기본 기능 차단
+        console.log(e.keyCode); //tab 9
+        if (e.shiftKey && e.keyCode === 9 || !e.shiftKey && e.keyCode === 9)  _last2.focus();
+        if (e.keyCode === 13) _last.click();
+      }
+    });
 
+    //마지막 링크에서 shift(X)+tab을 누르면 가장 처음으로 포커스 강제이동
+    _last2.on('keydown', function (e) {
+      if (!e.shiftKey && e.keyCode === 9) {
+          e.preventDefault(); //기본 기능차단
+          _first2.focus();     //포커스 처음으로
+      }
+    });
+  
+    //modal닫기 버튼 클릭 이벤트
+    _closeBtn3.on('click', function () {
+      //1) 모달컨텐츠 숨기기(visibility) => 모달상세컨텐츠의 나머지 형제들을 스크린리더에서 접근할수 있도록 되돌리기(속성제거 - aria-hidden, inert)
+      _mdCnt3.stop().animate({opacity: 0}, function () {
+        $(this).css('visibility', 'hidden').siblings().removeAttr('aria-hidden inert');
+      });
+  
+      //2) 열기 버튼으로 포커스 강제 이동
+      _openBtn3.focus();
+    });
+  
+    //esc 키보드를 누른 경우도 닫겨진다
+    $(window).on('keydown', function (e) {
+      //console.log(e.keyCode); //esc 27
+      if (e.keyCode === 27) _closeBtn3.click();
+    });
+  });
   //vans 가로 스크롤
   //1) 초기 설정 : 인디케이터 첫번째 li.on  클래스 추가하여 활성화
   $menu.eq(0).addClass('on');

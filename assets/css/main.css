@@ -565,7 +565,7 @@
 @keyframes hide {
   0%, 100% {
     transform: translateY(-100%); } }
-.vansModal {
+.pjModal {
   z-index: 200;
   position: fixed;
   top: 0;
@@ -574,7 +574,7 @@
   height: 100%;
   visibility: hidden;
   opacity: 0; }
-  .vansModal .vans-container .vansView {
+  .pjModal .pj-container .pjView {
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
@@ -589,7 +589,7 @@
     top: 0;
     left: 0;
     width: 100%; }
-    .vansModal .vans-container .vansView .headerVans {
+    .pjModal .pj-container .pjView .pj-header {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -601,10 +601,10 @@
       background: #fff;
       border: 3px solid #000;
       z-index: 400; }
-      .vansModal .vans-container .vansView .headerVans h2 {
+      .pjModal .pj-container .pjView .pj-header h2 {
         margin-left: 1.5vw;
         display: inline-block; }
-    .vansModal .vans-container .vansView .bottomVans {
+    .pjModal .pj-container .pjView .pj-bottom {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -616,45 +616,45 @@
       width: 100%;
       background: #fff;
       z-index: 400; }
-      .vansModal .vans-container .vansView .bottomVans > div {
+      .pjModal .pj-container .pjView .pj-bottom > div {
         position: relative; }
-        .vansModal .vans-container .vansView .bottomVans > div .controler {
+        .pjModal .pj-container .pjView .pj-bottom > div .controler {
           width: 30%;
           position: absolute;
           top: 1.04vw;
           right: 1.2vw; }
-          .vansModal .vans-container .vansView .bottomVans > div .controler .prev, .vansModal .vans-container .vansView .bottomVans > div .controler .next {
+          .pjModal .pj-container .pjView .pj-bottom > div .controler .prev, .pjModal .pj-container .pjView .pj-bottom > div .controler .next {
             -webkit-background-size: cover;
             -moz-background-size: cover;
             background-size: cover;
             height: 7.41vh; }
-            .vansModal .vans-container .vansView .bottomVans > div .controler .prev img, .vansModal .vans-container .vansView .bottomVans > div .controler .next img {
+            .pjModal .pj-container .pjView .pj-bottom > div .controler .prev img, .pjModal .pj-container .pjView .pj-bottom > div .controler .next img {
               height: auto;
               max-width: 100%;
               vertical-align: bottom; }
-          .vansModal .vans-container .vansView .bottomVans > div .controler .prev {
+          .pjModal .pj-container .pjView .pj-bottom > div .controler .prev {
             width: 7.41vh;
             float: left; }
-          .vansModal .vans-container .vansView .bottomVans > div .controler .next {
+          .pjModal .pj-container .pjView .pj-bottom > div .controler .next {
             width: 24.44vh;
             float: right; }
-        .vansModal .vans-container .vansView .bottomVans > div .indicator {
+        .pjModal .pj-container .pjView .pj-bottom > div .indicator {
           width: 65%;
           position: absolute;
           top: 1.04vw;
           left: 1.2vw; }
-          .vansModal .vans-container .vansView .bottomVans > div .indicator ul {
+          .pjModal .pj-container .pjView .pj-bottom > div .indicator ul {
             height: 4.32vw;
             width: 100%;
             position: relative; }
-            .vansModal .vans-container .vansView .bottomVans > div .indicator ul li {
+            .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li {
               float: left;
               height: 7.41vh;
               padding-right: 0.73vw; }
-              .vansModal .vans-container .vansView .bottomVans > div .indicator ul li button {
+              .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li button {
                 vertical-align: top;
                 width: 100%; }
-                .vansModal .vans-container .vansView .bottomVans > div .indicator ul li button .txt {
+                .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li button .txt {
                   font-size: 1.56vw;
                   opacity: 0;
                   line-height: 7.41vh;
@@ -662,7 +662,7 @@
                   position: absolute;
                   top: 0;
                   right: 0; }
-                .vansModal .vans-container .vansView .bottomVans > div .indicator ul li button .icon {
+                .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li button .icon {
                   -webkit-box-sizing: border-box;
                   -moz-box-sizing: border-box;
                   box-sizing: border-box;
@@ -674,7 +674,7 @@
                   float: left;
                   border: 3px solid #000;
                   height: 7.41vh; }
-                  .vansModal .vans-container .vansView .bottomVans > div .indicator ul li button .icon::before {
+                  .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li button .icon::before {
                     -webkit-border-radius: 50%;
                     -moz-border-radius: 50%;
                     border-radius: 50%;
@@ -689,7 +689,7 @@
                     height: 0;
                     background: #000;
                     text-align: center; }
-          .vansModal .vans-container .vansView .bottomVans > div .indicator ul li.on .icon:before {
+          .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li.on .icon:before {
             -webkit-transform: translate(-50%, -50%);
             -moz-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
@@ -699,22 +699,22 @@
             left: 50%;
             width: 70%;
             height: 70%; }
-          .vansModal .vans-container .vansView .bottomVans > div .indicator ul li.on .txt {
+          .pjModal .pj-container .pjView .pj-bottom > div .indicator ul li.on .txt {
             -webkit-transform: 0.5s;
             -moz-transform: 0.5s;
             -o-transform: 0.5s;
             -ms-transform: 0.5s;
             transform: 0.5s;
             opacity: 1; }
-    .vansModal .vans-container .vansView #vansContainer, .vansModal .vans-container .vansView #vansContainer .vansCnt_wrap, .vansModal .vans-container .vansView #vansContainer .vansCnt_wrap section {
+    .pjModal .pj-container .pjView .pjContainer, .pjModal .pj-container .pjView .pjContainer .pj_wrap, .pjModal .pj-container .pjView .pjContainer .pj_wrap section {
       height: 100%;
       background: #fff; }
-    .vansModal .vans-container .vansView #vansContainer {
+    .pjModal .pj-container .pjView #vansContainer {
       width: 100%;
       overflow: hidden; }
-      .vansModal .vans-container .vansView #vansContainer .vansCnt_wrap {
+      .pjModal .pj-container .pjView #vansContainer .vansCnt_wrap {
         height: 82.32vh; }
-        .vansModal .vans-container .vansView #vansContainer .vansCnt_wrap section {
+        .pjModal .pj-container .pjView #vansContainer .vansCnt_wrap section {
           float: left;
           padding-top: 3.7vw;
           padding-bottom: 6.25vw;
@@ -722,12 +722,12 @@
           /* .vansTits, .vansSmallTits{position: absolute;font-family: yoon;left: 5.63vw;}
           .vansTits{top:7.34vw;font-size: 1.88vw;}
           .vansSmallTits{top:9.32vw;font-size: 1.04vw; padding-top: 0.31vw;} */ }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt1 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt1 {
         width: 100%;
         position: relative;
         color: #1800fd;
         background: #fff; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 h2 {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 h2 {
           -webkit-transform: skew(-30deg, -6deg) translateX(-50%);
           -moz-transform: skew(-30deg, -6deg) translateX(-50%);
           -o-transform: skew(-30deg, -6deg) translateX(-50%);
@@ -738,7 +738,7 @@
           left: 50%;
           font-size: 3.65vw;
           text-align: right; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 p {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 p {
           -webkit-transform: skew(-30deg, -6deg);
           -moz-transform: skew(-30deg, -6deg);
           -o-transform: skew(-30deg, -6deg);
@@ -748,43 +748,43 @@
           font-size: 1.15vw;
           font-family: Mot;
           font-weight: 500; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 .vansPcDrop {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 .vansPcDrop {
           position: absolute;
           top: 0;
           left: 0;
           width: 33.13vw;
           height: 46.41vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt1 .vansPcDrop img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt1 .vansPcDrop img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 .vansMoblieDrop {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 .vansMoblieDrop {
           position: absolute;
           top: 0;
           right: 0;
           width: 26.41vw;
           height: 46.3vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt1 .vansMoblieDrop img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt1 .vansMoblieDrop img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 .period {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 .period {
           top: 24vw;
           left: 60%; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 .index {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 .index {
           top: 28vw;
           left: 58%; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 .lineSkew {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 .lineSkew {
           position: absolute;
           width: 28.65vw;
           height: 4.01vw;
           top: 26vw;
           left: 25%; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt1 .lineSkew img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt1 .lineSkew img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt1 .bgCircle {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt1 .bgCircle {
           -webkit-border-radius: 50%;
           -moz-border-radius: 50%;
           border-radius: 50%;
@@ -799,72 +799,72 @@
           position: absolute;
           top: 14vw;
           left: 50%; }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt2 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt2 {
         width: 100%;
         position: relative; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt2 .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt2 .plain {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .vansTits, .pjModal .pj-container .pjView #vansContainer #vansCnt2 .vansSmallTits, .pjModal .pj-container .pjView #vansContainer #vansCnt2 .plain {
           position: absolute;
           font-family: yoon;
           left: 5.63vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .vansTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .vansTits {
           top: 4.34vw;
           font-size: 1.88vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .vansSmallTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .vansSmallTits {
           top: 6.32vw;
           font-size: 1.04vw;
           padding-top: 0.31vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .plain {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .plain {
           font-size: 0.7vw;
           top: 10.2vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap {
           width: 40%;
           float: left;
           position: absolute;
           left: 5.63vw;
           top: 19vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li {
             width: 50%; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li img {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li img {
               height: auto;
               max-width: 100%;
               vertical-align: bottom; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li .whiteEra {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li .whiteEra {
               height: 6.04vw;
               width: 15.68vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li .whiteslip-on {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li .whiteslip-on {
               height: 6.35vw;
               width: 15.31vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li .era {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li .era {
               width: 14.38vw;
               height: 9.58vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li .slip-on {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li .slip-on {
               width: 15vw;
               height: 7.6vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li .era, .vansModal .vans-container .vansView #vansContainer #vansCnt2 .shoeWrap li .slip-on {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li .era, .pjModal .pj-container .pjView #vansContainer #vansCnt2 .shoeWrap li .slip-on {
               padding-top: 4.17vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .pointer {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .pointer {
           width: 12.34vw;
           height: 1.04vw;
           position: absolute;
           top: 9.5vw;
           left: 39.06vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt2 .pointer img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt2 .pointer img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right {
           width: 60%; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right > div {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right > div {
             width: 24.53vw;
             height: 43.23vw;
             top: 9.32vw;
             border: 3px solid #000;
             margin-left: 25%; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right > div img {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right > div img {
               height: auto;
               max-width: 100%;
               vertical-align: bottom; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain {
             position: absolute;
             top: 4vw;
             right: 0;
@@ -872,21 +872,21 @@
             font-family: 'yoon';
             font-size: 0.83vw;
             margin-top: 0.3vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li {
               width: 100%; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li > p {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li > p {
                 width: 7.86vw;
                 float: right;
                 position: absolute;
                 top: 6vw;
                 right: 6vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div {
                 width: 100%; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div .subLine {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div .subLine {
                   float: left;
                   width: 5.26vw;
                   border: 1px solid #000; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div p {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div p {
                   color: #fff;
                   text-align: center;
                   line-height: 1.56vw;
@@ -896,77 +896,77 @@
                   height: 1.56vw;
                   position: absolute;
                   left: 5vw; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div p:first-child {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li div p:first-child {
                   top: -0.1vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li .customPic {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li .customPic {
                 position: absolute;
                 left: 8vw;
                 border: 3px solid #000;
                 width: 7.86vw;
                 height: 4.58vw; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li .customPic img {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain li .customPic img {
                   height: auto;
                   max-width: 100%;
                   vertical-align: bottom; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain .cntTwoTwo > div {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain .cntTwoTwo > div {
               position: absolute;
               top: 20vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain .cntTwoTwo > p {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt2 .cnt2Right .cnt2Plain .cntTwoTwo > p {
               position: absolute;
               top: 20vw; }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt3 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt3 {
         width: 100%;
         position: relative; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt3 .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt3 .plain, .vansModal .vans-container .vansView #vansContainer #vansCnt3 .plain2 {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .vansTits, .pjModal .pj-container .pjView #vansContainer #vansCnt3 .vansSmallTits, .pjModal .pj-container .pjView #vansContainer #vansCnt3 .plain, .pjModal .pj-container .pjView #vansContainer #vansCnt3 .plain2 {
           position: absolute;
           font-family: yoon;
           left: 5.63vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .vansTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .vansTits {
           top: 4.34vw;
           font-size: 1.88vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .vansSmallTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .vansSmallTits {
           top: 6.32vw;
           font-size: 1.04vw;
           padding-top: 0.31vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .plain {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .plain {
           font-size: 0.7vw;
           top: 10.2vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .plain2 {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .plain2 {
           font-size: 0.7vw;
           top: 10.2vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3CollecionPic {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3CollecionPic {
           width: 25.11vw;
           height: 16.11vw;
           top: 21vw;
           left: 5.63vw;
           position: absolute; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3CollecionPic img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3CollecionPic img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .pointer {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .pointer {
           width: 12.34vw;
           height: 1.04vw;
           position: absolute;
           top: 9.5vw;
           left: 39.06vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt3 .pointer img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt3 .pointer img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right {
           width: 60%; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right > div {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right > div {
             width: 24.53vw;
             height: 43.23vw;
             top: 9.32vw;
             border: 3px solid #000;
             margin-left: 25%; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right > div img {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right > div img {
               height: auto;
               max-width: 100%;
               vertical-align: bottom; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain {
             position: absolute;
             top: 4vw;
             right: 0;
@@ -974,21 +974,21 @@
             font-family: 'yoon';
             font-size: 0.83vw;
             margin-top: 0.3vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li {
               width: 100%; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li > p {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li > p {
                 width: 7.86vw;
                 float: right;
                 position: absolute;
                 top: 0;
                 right: 6vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div {
                 width: 100%; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div .subLine {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div .subLine {
                   float: left;
                   width: 5.26vw;
                   border: 1px solid #000; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div p {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div p {
                   color: #fff;
                   text-align: center;
                   line-height: 1.56vw;
@@ -999,119 +999,119 @@
                   position: absolute;
                   left: 5vw;
                   word-break: keep-all; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div p:first-child {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain li div p:first-child {
                   top: -0.1vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain .cnt3Two > div {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain .cnt3Two > div {
               position: absolute;
               top: 29vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain .cnt3Two > p {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt3 .cnt3Right .cnt3Plain .cnt3Two > p {
               position: absolute;
               top: 29vw; }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt4 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt4 {
         width: 100%;
         position: relative;
         font-family: yoon; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt4 .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt4 .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt4 .visualIdentity {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt4 .vansTits, .pjModal .pj-container .pjView #vansContainer #vansCnt4 .vansSmallTits, .pjModal .pj-container .pjView #vansContainer #vansCnt4 .visualIdentity {
           position: absolute;
           left: 5.63vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt4 .vansTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt4 .vansTits {
           top: 2.34vw;
           font-size: 1.88vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt4 .vansSmallTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt4 .vansSmallTits {
           top: 4.32vw;
           font-size: 1.04vw;
           padding-top: 0.31vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt4 .visualIdentity {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt4 .visualIdentity {
           top: 7.5vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .visualIdentity h3 {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .visualIdentity h3 {
             font-size: 1.25vw;
             padding-bottom: 0.6vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .visualIdentity p {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .visualIdentity p {
             font-size: 0.73vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .visualIdentity p + p {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .visualIdentity p + p {
             padding-top: 0.4vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element {
           position: absolute;
           left: 30vw;
           top: 7.5vw;
           height: 100%; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element li h3 {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element li h3 {
             font-size: 1.25vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element li p {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element li p {
             font-size: 0.73vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element li p + p {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element li p + p {
             padding-top: 0.4vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element li > p {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element li > p {
             padding-top: 1vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element li .infoLine {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element li .infoLine {
             border: 1px solid #000;
             width: 38.56vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .ill {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .ill {
             margin-top: 3vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .graffi {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .graffi {
             margin-top: 7vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors {
             margin-top: 2vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip {
               position: absolute;
               width: 100%;
               top: 28.3vw;
               left: 13vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li {
                 width: 4.17vw;
                 height: 1.04vw;
                 border: 1.5px solid #000; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li:first-child {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li:first-child {
                   background: #000; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li:nth-child(2) {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li:nth-child(2) {
                   background: #fff; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li:nth-child(3) {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li:nth-child(3) {
                   background: #1800fd; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li:nth-child(4) {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li:nth-child(4) {
                   background: #00ff00; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li:last-child {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li:last-child {
                   background: #ff0000; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt4 .element .colors .colorChip li + li {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt4 .element .colors .colorChip li + li {
                 margin-left: 1.04vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt4 .cnt4Pc {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt4 .cnt4Pc {
           width: 21.53vw;
           height: 55.83vw;
           position: absolute;
           top: 0;
           right: 8.85vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt4 .cnt4Pc img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt4 .cnt4Pc img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt5 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt5 {
         width: 100%;
         position: relative;
         font-family: yoon; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt5 .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt5 p {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .vansTits, .pjModal .pj-container .pjView #vansContainer #vansCnt5 .vansSmallTits, .pjModal .pj-container .pjView #vansContainer #vansCnt5 p {
           position: absolute;
           left: 5.63vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .vansTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .vansTits {
           top: 2.34vw;
           font-size: 1.88vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .vansSmallTits {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .vansSmallTits {
           top: 4.32vw;
           font-size: 1.04vw;
           padding-top: 0.31vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .plain {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .plain {
           font-size: 0.7vw;
           top: 10.2vw;
           padding-top: 0.31vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .cnt5Pc {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .cnt5Pc {
           position: absolute;
           left: 39.10vw;
           top: 0;
           height: 56.25vw;
           width: 35.57vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt5 .cnt5Pc img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt5 .cnt5Pc img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .framePc {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .framePc {
           -webkit-border-radius: 27px;
           -moz-border-radius: 27px;
           border-radius: 27px;
@@ -1121,17 +1121,17 @@
           left: 39.10vw;
           width: 35.57vw;
           height: 20.26vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .cnt5Moblie {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .cnt5Moblie {
           position: absolute;
           left: 77.47vw;
           top: 0;
           width: 14.38vw;
           height: 46.3vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt5 .cnt5Moblie img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt5 .cnt5Moblie img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt5 .frameM {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt5 .frameM {
           -webkit-border-radius: 29px;
           -moz-border-radius: 29px;
           border-radius: 29px;
@@ -1141,82 +1141,82 @@
           left: 77.4vw;
           width: 14.17vw;
           height: 26.09vw; }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt6 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt6 {
         width: 100%;
         position: relative;
         font-family: yoon;
         z-index: 350; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div {
           width: 30%; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansSmallTits, .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .vansTits, .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .vansSmallTits, .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .pGroup {
             position: absolute;
             left: 5.63vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansTits {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .vansTits {
             top: 2.34vw;
             font-size: 1.88vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .vansSmallTits {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .vansSmallTits {
             top: 4.32vw;
             font-size: 1.04vw;
             padding-top: 0.31vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .pGroup {
             font-size: 0.7vw;
             bottom: 12vw;
             padding-top: 0.31vw;
             word-break: keep-all; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup p {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .pGroup p {
               line-height: 1.56vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 > div .pGroup p + p {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 > div .pGroup p + p {
               padding-top: 1.6vw; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap {
           width: 70%;
           position: absolute;
           left: 38vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul {
             width: 100%;
             position: absolute;
             top: -1vw;
             left: 10vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li {
               position: absolute; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li p {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li p {
                 font-size: 0.7vw;
                 position: absolute;
                 left: 0; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li > div {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li > div {
                 position: absolute;
                 left: 0; }
-                .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li > div img {
+                .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li > div img {
                   height: auto;
                   max-width: 100%;
                   vertical-align: bottom; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:first-child p {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:first-child p {
               top: 0vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:first-child > div {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:first-child > div {
               width: 49.16vw;
               height: 14.58vw;
               position: absolute;
               left: -0.5vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) {
               top: 12.5vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) p {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) p {
                 top: 0vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) > div {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:nth-child(2) > div {
                 width: 47.39vw;
                 height: 13.7vw; }
-            .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:last-child {
+            .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:last-child {
               top: 26vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:last-child p {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:last-child p {
                 top: 0vw; }
-              .vansModal .vans-container .vansView #vansContainer #vansCnt6 .codingWrap ul li:last-child > div {
+              .pjModal .pj-container .pjView #vansContainer #vansCnt6 .codingWrap ul li:last-child > div {
                 width: 47.39vw;
                 height: 12.34vw; }
-      .vansModal .vans-container .vansView #vansContainer #vansCnt7 {
+      .pjModal .pj-container .pjView #vansContainer #vansCnt7 {
         width: 100%;
         position: relative;
         font-family: yoon; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg {
           overflow: hidden; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg p {
             -webkit-transform: rotate(-10deg);
             -moz-transform: rotate(-10deg);
             -o-transform: rotate(-10deg);
@@ -1224,24 +1224,24 @@
             transform: rotate(-10deg);
             position: absolute;
             font-size: 1.56vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(1) {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(1) {
             top: -9vw;
             left: -2vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(2) {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(2) {
             top: 4vw;
             left: -2vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(3) {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(3) {
             width: 110%;
             top: 30vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(4) {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(4) {
             top: 45vw;
             left: 2vw;
             width: 110%; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(5) {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .vansCnt7Bg p:nth-child(5) {
             top: -1vw;
             left: -2vw;
             width: 110%; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt7 .macbook {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt7 .macbook {
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
           -o-transform: translate(-50%, -50%);
@@ -1252,11 +1252,11 @@
           left: 50%;
           width: 58.11vw;
           height: 36.46vw; }
-          .vansModal .vans-container .vansView #vansContainer #vansCnt7 .macbook img {
+          .pjModal .pj-container .pjView #vansContainer #vansCnt7 .macbook img {
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt7 a {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt7 a {
           -webkit-transform: translate(-50%, -50%);
           -moz-transform: translate(-50%, -50%);
           -o-transform: translate(-50%, -50%);
@@ -1272,10 +1272,66 @@
           height: 3.28vw;
           line-height: 3.28vw;
           text-align: center; }
-        .vansModal .vans-container .vansView #vansContainer #vansCnt7 a:hover, .vansModal .vans-container .vansView #vansContainer #vansCnt7 a.focus {
+        .pjModal .pj-container .pjView #vansContainer #vansCnt7 a:hover, .pjModal .pj-container .pjView #vansContainer #vansCnt7 a.focus {
           background: #000;
           color: #fff; }
-    .vansModal .vans-container .vansView .class2 {
+    .pjModal .pj-container .pjView #danContainer {
+      width: 100%;
+      overflow: hidden; }
+      .pjModal .pj-container .pjView #danContainer .danCnt_wrap {
+        height: 82.32vh; }
+        .pjModal .pj-container .pjView #danContainer .danCnt_wrap section {
+          float: left;
+          padding-top: 3.7vw;
+          padding-bottom: 6.25vw; }
+      .pjModal .pj-container .pjView #danContainer #danCnt1 {
+        width: 100%;
+        position: relative;
+        background: #fff; }
+        .pjModal .pj-container .pjView #danContainer #danCnt1 .danSquare {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 56.95vw;
+          height: 100%; }
+          .pjModal .pj-container .pjView #danContainer #danCnt1 .danSquare img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
+        .pjModal .pj-container .pjView #danContainer #danCnt1 .danMoblie {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 65.1vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt1 .danMoblie img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
+        .pjModal .pj-container .pjView #danContainer #danCnt1 h2 {
+          -webkit-transform: skewY(32deg);
+          -moz-transform: skewY(32deg);
+          -o-transform: skewY(32deg);
+          -ms-transform: skewY(32deg);
+          transform: skewY(32deg);
+          position: absolute;
+          top: 10vw;
+          left: 11%;
+          font-size: 2.8vw;
+          line-height: 5vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt1 p {
+          -webkit-transform: skewY(32deg);
+          -moz-transform: skewY(32deg);
+          -o-transform: skewY(32deg);
+          -ms-transform: skewY(32deg);
+          transform: skewY(32deg);
+          position: absolute;
+          top: 26vw;
+          left: 11%;
+          font-size: 1vw;
+          letter-spacing: 0.35vw;
+          font-family: yoon; }
+    .pjModal .pj-container .pjView .class2 {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       background-size: cover;
