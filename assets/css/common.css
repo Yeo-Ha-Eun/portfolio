@@ -47,7 +47,7 @@
   src: url("../font/Roboto-Medium.eot");
   src: url("../font/Roboto-Medium.eot#iefix") format("embedded-opentype"), url("../font/Roboto-Medium.woff2") format("woff2"), url("../font/Roboto-Medium.woff") format("woff"), url("../font/Roboto-Medium.otf") format("truetype"); }
 /* tag reset */
-body, h1, h2, h3, p, button, img, figure, ul, li {
+body, h1, h2, h3, p, button, img, figure, ul, li, strong {
   margin: 0;
   padding: 0; }
 
