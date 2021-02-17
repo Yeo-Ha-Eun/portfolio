@@ -1331,6 +1331,11 @@
           font-size: 1vw;
           letter-spacing: 0.35vw;
           font-family: yoon; }
+      .pjModal .pj-container .pjView #danContainer #danCnt2 {
+        width: 100%;
+        position: relative;
+        font-family: roboto;
+        background: #fff; }
     .pjModal .pj-container .pjView .class2 {
       -webkit-background-size: cover;
       -moz-background-size: cover;

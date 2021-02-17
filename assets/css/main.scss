@@ -574,6 +574,8 @@
                     font-size: 1vw;letter-spacing: 0.35vw;font-family: yoon;
                 }
             }
+            #danCnt2{width: 100%;position: relative;font-family: roboto;background: #fff;
+            }
         }
         .class2{
             @include bgsize(cover);
