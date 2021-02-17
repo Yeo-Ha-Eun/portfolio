@@ -39,7 +39,7 @@ $(document).ready(function () {
     //console.log(total);
     var $menu2 = $('#danIndicator ul li');
     var $cntWrap2 = $('#danContainer .danCnt_wrap');
-    var total2 = $cntWrap2.children().size(); //섹션의 전체 개수
+    var total2 = $cntWrap2.children().size(); //섹션의 전체 개
 
   //디지털시계
   //디지털시계1) 1초에 한번씩 날짜 객체를 생성해 시간 출력 => 반복적인 코드는 함수로 생성하면 좋다
