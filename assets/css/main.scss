@@ -325,10 +325,7 @@
             .pjContainer, .pjContainer .pj_wrap, .pjContainer .pj_wrap section{height: 100%;background: #fff;}
             #vansContainer{width: 100%;overflow: hidden;
                 .vansCnt_wrap{height: 82.32vh;
-                    section{float: left;padding-top: 3.7vw;padding-bottom: 6.25vw;/* border-left: 3px solid #000;border-right:3px solid #000; */
-                    /* .vansTits, .vansSmallTits{position: absolute;font-family: yoon;left: 5.63vw;}
-                    .vansTits{top:7.34vw;font-size: 1.88vw;}
-                    .vansSmallTits{top:9.32vw;font-size: 1.04vw; padding-top: 0.31vw;} */
+                    section{float: left;padding-top: 3.7vw;padding-bottom: 6.25vw;
             }
         }
                     #vansCnt1{width: 100%;position: relative;color: #1800fd;background: #fff;
@@ -529,7 +526,7 @@
                         }
                     }
                 }
-                #vansCnt7{width: 100%;position: relative;    font-family: yoon;
+                    #vansCnt7{width: 100%;position: relative;    font-family: yoon;
                     .vansCnt7Bg{overflow: hidden;
                         p{
                             @include transform(rotate(-10deg));
@@ -558,51 +555,114 @@
                 }
             }
             #danCnt1{width: 100%;position: relative;background: #fff;
-               .danSquare{position: absolute;top: 0;left: 0;
-                width: 56.95vw;height: 100%;
-                img{height: auto;max-width: 100%;vertical-align: bottom;}
-            } 
-                .danMoblie{position: absolute;top: 0;right: 0;height: 100%;width: 65.1vw;
-                    img{height: auto;max-width: 100%;vertical-align: bottom;}
-                }
-                h2{
-                    @include transform(skewY(32deg));position: absolute;top: 10.8vw;left: 11%;font-size: 2.8vw;
-                    line-height: 5vw;
-                }
-                p{
-                    @include transform(skewY(32deg));position: absolute;top: 26vw;left: 11%;
-                    font-size: 1vw;letter-spacing: 0.35vw;font-family: yoon;
+                .danSquare{position: absolute;top: 0;left: 0;
+                 width: 56.95vw;height: 100%;
+                 img{height: auto;max-width: 100%;vertical-align: bottom;}
+             } 
+                 .danMoblie{position: absolute;top: 0;right: 0;height: 100%;width: 65.1vw;
+                     img{height: auto;max-width: 100%;vertical-align: bottom;}
+                 }
+                 h2{
+                     @include transform(skewY(32deg));position: absolute;top: 10.8vw;left: 11%;font-size: 2.8vw;
+                     line-height: 5vw;
+                 }
+                 p{
+                     @include transform(skewY(32deg));position: absolute;top: 26vw;left: 11%;
+                     font-size: 1vw;letter-spacing: 0.35vw;font-family: yoon;
+                 }
+             }
+             #danCnt2{width: 100%;position: relative;font-family: roboto;background: #fff;
+                 .aboutLeft, .aboutRight{width: 45%;height: 100%;float: left;padding-left:5%;
+                     .aboutSubTxt, .aboutSubTitle{position: absolute;}
+                     .aboutSubTitle{top: 5vw;font-size: 2vw;}
+                     .aboutSubTxt{top: 8vw;font-size: 1.2vw;margin-bottom: 65.43vw;}
+                 }
+                 .aboutLeft{
+                     .offLineGroup{position: absolute;top:15vw;left: 5%;height: 16.51vw;
+                     p{
+                         @include transform(translateY(-900%));
+                         text-align: center;color: #fff;font-size: 0.8vw;}
+                         .offLine{width: 10vw;height: 16.51vw;
+                             img{height: auto;max-width: 100%;vertical-align: bottom;}
+                         }
+                         &::after{content: "";position: absolute;top: 50%;left: 10vw;background-color: #000;height: 2px;width: 10vw;}
+                 }
+                
+                     ul{
+                         @include border-box;
+                         float: right;height: 16.51vw;width: 25vw;margin-top: 11vw;background-color: #fff;border:2px solid black;
+                         z-index: 50;
+                     li{float: left;width: 50%;
+                     .subPurpose{word-break: keep-all;text-align: center; font-size: 0.8vw;padding: 2vw 1vw 1.5vw;}
+                     .purpose{text-align: center;font-size: 1.3vw;}
+                     }
+                 }
+                 .blackSquare{background: #000 ;color:#fff;font-size: 1.3vw;text-align: center;line-height: 2vw;padding: 0.5vw 2vw;display: inline-block;position: absolute;right: 50%;bottom: 28%;}
+             }
+                 .aboutRight{
+                     .logoTxt{font-size: 1vw;}
+                     .topAria{
+                         position: absolute;top:15vw;left: 55%;
+                         .dancheong{
+                             width: 5vw;height: 5vw;margin-top: 1.5vw;
+                             img{height: auto;max-width: 100%;vertical-align: bottom;}
+                         }
+                         p{position: absolute;top: 0;
+                             
+                         }
+                         .logoTxtSe{left: 400%;}
+                         .logoTxtTh{left: 700%;}
+                     }
+                     .bottomAria{
+                         position: absolute;top: 30vw;left: 55%;
+                         ul{margin-top: 3vw;
+                         li+li{margin-left: 2vw;}
+                         li{float: left;width: 5vw;}
+                         li > .logos{width: 5vw;height: 5vw;
+                             img{height: auto;max-width: 100%;vertical-align: bottom;}
+                         }
+                     }
+                     }
+                 }
+             }
+             #danCnt3{width: 100%;position: relative;font-family: roboto;background: #fff;
+            h2{position: absolute;top: 5vw;left: 5vw;font-size: 2vw;}
+            .titleDanTp, .subTitDanTp{font-size: 1vw;}
+            .subTitDanTp{ position: absolute;top: 0;left: 11vw;}
+            .traditional, .mordern{position: absolute;left: 5vw;}
+            .traditional{top: 15vw;
+                ul{
+                    position: absolute; top: 0; left: 25vw;width: 800%;
+                    .blackChip{background-color: #000;}
+                    .redChip{background-color: #ff0000;}
+                    .blueChip{background-color: #0000ff;}
+                    .yellowChip{background-color: #ffff00;}
+                    .whiteChip{border: 0.2vw solid black;}
+                    li + li{margin-left: 1vw;}
+                    .colorChip{
+                        @include border-box;
+                        float: left;width: 6vw;
+                        height: 1.5vw;}
                 }
             }
-            #danCnt2{width: 100%;position: relative;font-family: roboto;background: #fff;
-                .aboutLeft, .aboutRight{width: 45%;height: 100%;float: left;padding-left:5%;
-                    .aboutSubTxt, .aboutSubTitle{position: absolute;}
-                    .aboutSubTitle{top: 5vw;font-size: 2vw;}
-                    .aboutSubTxt{top: 8vw;font-size: 1.2vw;margin-bottom: 65.43vw;}
-                }
-                .aboutLeft{
-                    .offLineGroup{position: absolute;top:15vw;left: 5%;height: 16.51vw;
-                    p{
-                        @include transform(translateY(-900%));
-                        text-align: center;color: #fff;font-size: 0.8vw;}
-                        .offLine{width: 10vw;height: 16.51vw;
+            .mordern{top: 24vw;
+                .shapes{
+                    ul{width: 800%;position: absolute; top: 0; left: 25vw;
+                    li{ display: inline-block;height: 8vw;
+                        div{height: 8vw;position: absolute; top: 0;
                             img{height: auto;max-width: 100%;vertical-align: bottom;}
                         }
-                        &::after{content: "";position: absolute;top: 50%;left: 10vw;background-color: #000;height: 2px;width: 10vw;}
-                }
-               
-                    ul{
-                        @include border-box;
-                        float: right;height: 16.51vw;width: 25vw;margin-top: 11vw;background-color: #fff;border:2px solid black;
-                        z-index: 50;
-                    li{float: left;width: 50%;
-                    .subPurpose{word-break: keep-all;text-align: center; font-size: 0.8vw;padding: 2vw 1vw 1.5vw;}
-                    .purpose{text-align: center;font-size: 1.3vw;}
                     }
+                    li + li{margin-left: 1vw;}
                 }
-                .blackSquare{background: #000 ;color:#fff;font-size: 1.3vw;text-align: center;line-height: 2vw;padding: 0.5vw 2vw;display: inline-block;position: absolute;right: 50%;bottom: 28%;}
+                }
+                .font{
+                .subTitDanTp{top: 10vw;}
+            }}
+            .exhibition{position: absolute;top: 0;right: 8vw;width: 14vw;
+                img{height: auto;max-width: 100%;vertical-align: bottom;}
             }
-            }
+        }
         }
         .class2{
             @include bgsize(cover);

@@ -29,17 +29,14 @@ $(document).ready(function () {
 
   //가로 스크롤
   var $win = $(window);
-    var $menu = $('#vansIndicator ul li');
-    var $cntWrap = $('#vansContainer .vansCnt_wrap');
+    var $menu = $('.indicator ul li');
+    var $cntWrap = $('.pjContainer .pj_wrap');
     var tgIdx = 0;  //로딩시 보여지는 섹션의 인덱스 번호, 인디케이터의 활성화 번호
     var total = $cntWrap.children().size(); //섹션의 전체 개수
     var winWidth;   //window의 가로크기를 저장할 전역변수
     var timerResize = 0; //resize이벤트의 실행문 누적을 방지 하기위해 clearTimeout()에서 호출
     var timerWheel = 0; //mousewheel 이벤트의 실행문 누적을 방지
     //console.log(total);
-    var $menu2 = $('#danIndicator ul li');
-    var $cntWrap2 = $('#danContainer .danCnt_wrap');
-    var total2 = $cntWrap2.children().size(); //섹션의 전체 개
 
   //디지털시계
   //디지털시계1) 1초에 한번씩 날짜 객체를 생성해 시간 출력 => 반복적인 코드는 함수로 생성하면 좋다
@@ -365,7 +362,7 @@ $('#aboutWrap .smile').on('click', function (e) {
       if (e.keyCode === 27) _closeBtn3.click();
     });
   });
-  //vans 가로 스크롤
+  //가로 스크롤
   //1) 초기 설정 : 인디케이터 첫번째 li.on  클래스 추가하여 활성화
   $menu.eq(0).addClass('on');
 
@@ -454,96 +451,5 @@ $('#aboutWrap .smile').on('click', function (e) {
     //5-3) 인디케이터 활성 , .cnt_wrap 애니메이션
     $menu.eq(tgIdx).addClass('on').siblings().removeClass('on');
     $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
-  });
- 
-   //dan 가로 스크롤
-  //1) 초기 설정 : 인디케이터 첫번째 li.on  클래스 추가하여 활성화
-  $menu2.eq(0).addClass('on');
-
-  //2) resize 이벤트 : 없어도 된다 모달창의 크기가 100%여서 위치는 항상 top0, left0이다
-  winWidth = $win.width();
-  $cntWrap2.css('width', winWidth * total2).children().css('width', winWidth);
-
- //3) 인디케이터 클릭 이벤트
- $menu2.children().on('click', function (e) {
-     e.preventDefault();
-
-     //3-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
-     if ( $cntWrap2.is(':animated') ) return false;
-     tgIdx = $(this).parent().index(); //인디케이터 li의 인덱스번호
-     //console.log(tgIdx);
-     //3-2) 클릭한 인디케이터가 활성화
-     $(this).parent().addClass('on').siblings().removeClass('on');
-     //3-3) 애니메이트(.cnt_wrap)
-     $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
- });
-
- //4) 마우스휠 이벤트
- /*  mousewheel, DOMMouseScroll(파이어폭스)
-     delta(값) : 음수(-) -  마우스 휠을 아래로 내리는 경우 => 오른쪽
-     delta(값) : 양수(+) -  마우스 휠을 위로 올리는 경우 => 왼쪽  
-     파이어폭스 delta => e.originalEvent.detail => 다른 브라우저와 부호 반대 */
- $cntWrap2.on('mousewheel DOMMouseScroll', function (e) {
-     clearTimeout(timerWheel);
-
-     timerWheel = setTimeout(function () {
-         //4-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
-         if ( $cntWrap2.is(':animated') ) return false;
-
-         //4-2) delta값 구하기
-         //e.originalEvent.wheelDelta 파이어폭스를 제외한 나머지 브라우저
-         //e.originalEvent.detail*-1 파이어폭스 only
-         var delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -1;
-         //console.log(delta);
-
-         //4-3) if : 휠내리기-음수-오른쪽,  else if : 휠올리기-양수-왼쪽 => tgIdx
-         if (delta < 0  && tgIdx < total2 - 1) {
-             tgIdx++;
-             //console.log(delta, tgIdx, '휠내리기');
-         } else if (delta > 0 && tgIdx > 0) {
-             tgIdx--;
-             //console.log(delta, tgIdx, '휠올리기');
-         }
-
-         //4-4) 인디케이터 활성 , .cnt_wrap 애니메이션
-         $menu2.eq(tgIdx).addClass('on').siblings().removeClass('on');
-         $cntWrap2.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
-     }, 200);
- });
-
- //5) 키보드 이벤트 :if : 오른쪽(39)과 하단(40), else if : 왼쪽(37)과 상단(38)
- $(document).on('keydown', function (e) {
-     var key = e.keyCode;
-     var tg = e.target;
-     //console.log(key, tg);
-
-     //5-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
-     if ( $cntWrap2.is(':animated') ) return false;
-
-     //5-2) if : 오른쪽(39)과 하단(40), else if : 왼쪽(37)과 상단(38) => tgIdx제어
-     if ( (key === 39 || key === 40) && tgIdx < total2 - 1 ) tgIdx++;
-     else if ( (key === 37 || key === 38) && tgIdx > 0 ) tgIdx--;
-     else if ( (key === 13 || key === 32) && $(tg).is('[data-href]') ) {
-         tgIdx = $(tg).parent().index();
-     }
-
-     //5-3) 인디케이터 활성 , .cnt_wrap 애니메이션
-     $menu2.eq(tgIdx).addClass('on').siblings().removeClass('on');
-     $cntWrap2.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
- });
-
- //6) 이전과 다음 버튼 클릭 이벤트 :if : 다음, else if : 이전
-  $('.pjModal .controler button').on('click', function (e) {
-    //5-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
-    if ( $cntWrap2.is(':animated') ) return false;
-
-    //5-2) if : 다음, else if : 이전 => tgIdx제어
-    var btnNum=$(this).parent().index();
-    if (btnNum === 1 && tgIdx < total2 - 1) tgIdx++;
-    else if (btnNum === 0 && tgIdx > 0) tgIdx--;
-
-    //5-3) 인디케이터 활성 , .cnt_wrap 애니메이션
-    $menu2.eq(tgIdx).addClass('on').siblings().removeClass('on');
-    $cntWrap2.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
-  });
+  }); 
 });

@@ -717,11 +717,7 @@
         .pjModal .pj-container .pjView #vansContainer .vansCnt_wrap section {
           float: left;
           padding-top: 3.7vw;
-          padding-bottom: 6.25vw;
-          /* border-left: 3px solid #000;border-right:3px solid #000; */
-          /* .vansTits, .vansSmallTits{position: absolute;font-family: yoon;left: 5.63vw;}
-          .vansTits{top:7.34vw;font-size: 1.88vw;}
-          .vansSmallTits{top:9.32vw;font-size: 1.04vw; padding-top: 0.31vw;} */ }
+          padding-bottom: 6.25vw; }
       .pjModal .pj-container .pjView #vansContainer #vansCnt1 {
         width: 100%;
         position: relative;
@@ -1412,6 +1408,121 @@
           position: absolute;
           right: 50%;
           bottom: 28%; }
+        .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .logoTxt {
+          font-size: 1vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .topAria {
+          position: absolute;
+          top: 15vw;
+          left: 55%; }
+          .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .topAria .dancheong {
+            width: 5vw;
+            height: 5vw;
+            margin-top: 1.5vw; }
+            .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .topAria .dancheong img {
+              height: auto;
+              max-width: 100%;
+              vertical-align: bottom; }
+          .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .topAria p {
+            position: absolute;
+            top: 0; }
+          .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .topAria .logoTxtSe {
+            left: 400%; }
+          .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .topAria .logoTxtTh {
+            left: 700%; }
+        .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .bottomAria {
+          position: absolute;
+          top: 30vw;
+          left: 55%; }
+          .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .bottomAria ul {
+            margin-top: 3vw; }
+            .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .bottomAria ul li + li {
+              margin-left: 2vw; }
+            .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .bottomAria ul li {
+              float: left;
+              width: 5vw; }
+            .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .bottomAria ul li > .logos {
+              width: 5vw;
+              height: 5vw; }
+              .pjModal .pj-container .pjView #danContainer #danCnt2 .aboutRight .bottomAria ul li > .logos img {
+                height: auto;
+                max-width: 100%;
+                vertical-align: bottom; }
+      .pjModal .pj-container .pjView #danContainer #danCnt3 {
+        width: 100%;
+        position: relative;
+        font-family: roboto;
+        background: #fff; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 h2 {
+          position: absolute;
+          top: 5vw;
+          left: 5vw;
+          font-size: 2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 .titleDanTp, .pjModal .pj-container .pjView #danContainer #danCnt3 .subTitDanTp {
+          font-size: 1vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 .subTitDanTp {
+          position: absolute;
+          top: 0;
+          left: 11vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional, .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern {
+          position: absolute;
+          left: 5vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional {
+          top: 15vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul {
+            position: absolute;
+            top: 0;
+            left: 25vw;
+            width: 800%; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul .blackChip {
+              background-color: #000; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul .redChip {
+              background-color: #ff0000; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul .blueChip {
+              background-color: #0000ff; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul .yellowChip {
+              background-color: #ffff00; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul .whiteChip {
+              border: 0.2vw solid black; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul li + li {
+              margin-left: 1vw; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .traditional ul .colorChip {
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              float: left;
+              width: 6vw;
+              height: 1.5vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern {
+          top: 24vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern .shapes ul {
+            width: 800%;
+            position: absolute;
+            top: 0;
+            left: 25vw; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern .shapes ul li {
+              display: inline-block;
+              height: 8vw; }
+              .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern .shapes ul li div {
+                height: 8vw;
+                position: absolute;
+                top: 0; }
+                .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern .shapes ul li div img {
+                  height: auto;
+                  max-width: 100%;
+                  vertical-align: bottom; }
+            .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern .shapes ul li + li {
+              margin-left: 1vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt3 .mordern .font .subTitDanTp {
+            top: 10vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt3 .exhibition {
+          position: absolute;
+          top: 0;
+          right: 8vw;
+          width: 14vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt3 .exhibition img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
     .pjModal .pj-container .pjView .class2 {
       -webkit-background-size: cover;
       -moz-background-size: cover;
