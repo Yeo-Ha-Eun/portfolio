@@ -648,18 +648,26 @@
             .mordern{top: 24vw;
                 .shapes{
                     ul{width: 800%;position: absolute; top: 0; left: 25vw;
-                    li{ display: inline-block;height: 8vw;
-                        div{height: 8vw;position: absolute; top: 0;
+                        .shapeLi{width: 5vw;}
+                        .shapethreeLi{width: 10vw;}
+                    li{height: 5vw;float:left;
+                        .shapeone{width: 5vw;}                    
+                        .shapethree{width: 10vw;}   
+                        div{height: 5vw;position: absolute; top: 0;
                             img{height: auto;max-width: 100%;vertical-align: bottom;}
                         }
                     }
-                    li + li{margin-left: 1vw;}
+                    li + li{margin-left: 1.3vw;}
                 }
                 }
                 .font{
+                    ul{position: absolute; top: 10vw; left: 25vw;
+                    li{font-size: 1vw; float: left;width: 10vw;}
+                    }
                 .subTitDanTp{top: 10vw;}
             }}
             .exhibition{position: absolute;top: 0;right: 8vw;width: 14vw;
+
                 img{height: auto;max-width: 100%;vertical-align: bottom;}
             }
         }
