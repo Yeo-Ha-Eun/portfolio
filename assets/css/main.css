@@ -1539,6 +1539,102 @@
             height: auto;
             max-width: 100%;
             vertical-align: bottom; }
+      .pjModal .pj-container .pjView #danContainer #danCnt4 {
+        width: 100%;
+        position: relative;
+        font-family: roboto;
+        background: #fff; }
+        .pjModal .pj-container .pjView #danContainer #danCnt4 h2 {
+          position: absolute;
+          top: 5vw;
+          left: 5vw;
+          font-size: 2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt4 p {
+          position: absolute;
+          left: 5vw;
+          font-size: 1.2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt4 .aboutSubTxt {
+          top: 8vw;
+          margin-bottom: 65.43vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt4 .txt {
+          top: 13vw;
+          line-height: 2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt4 div {
+          position: absolute;
+          top: 5vw;
+          right: 0vw;
+          width: 55vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt4 div img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
+      .pjModal .pj-container .pjView #danContainer #danCnt5 {
+        width: 100%;
+        position: relative;
+        font-family: roboto;
+        background: #fff; }
+        .pjModal .pj-container .pjView #danContainer #danCnt5 h2 {
+          position: absolute;
+          top: 5vw;
+          left: 5vw;
+          font-size: 2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt5 p {
+          position: absolute;
+          left: 5vw;
+          font-size: 1.2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt5 .aboutSubTxt {
+          top: 8vw;
+          margin-bottom: 65.43vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt5 .txt {
+          top: 13vw;
+          line-height: 2vw; }
+        .pjModal .pj-container .pjView #danContainer #danCnt5 div {
+          position: absolute;
+          top: 5vw;
+          right: 0vw;
+          width: 54vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt5 div img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
+      .pjModal .pj-container .pjView #danContainer #danCnt6 {
+        width: 100%;
+        position: relative;
+        font-family: roboto;
+        background: #fff; }
+        .pjModal .pj-container .pjView #danContainer #danCnt6 div {
+          -webkit-transform: translate(-46%, -50%);
+          -moz-transform: translate(-46%, -50%);
+          -o-transform: translate(-46%, -50%);
+          -ms-transform: translate(-46%, -50%);
+          transform: translate(-46%, -50%);
+          position: absolute;
+          top: 44%;
+          left: 50%;
+          width: 34.11vw; }
+          .pjModal .pj-container .pjView #danContainer #danCnt6 div img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: bottom; }
+        .pjModal .pj-container .pjView #danContainer #danCnt6 a {
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 1.56vw;
+          background: #fff;
+          border: 3px solid #000;
+          width: 11.67vw;
+          height: 3.28vw;
+          line-height: 3.28vw;
+          text-align: center; }
+        .pjModal .pj-container .pjView #danContainer #danCnt6 a:hover, .pjModal .pj-container .pjView #danContainer #danCnt6 a.focus {
+          background: #000;
+          color: #fff; }
     .pjModal .pj-container .pjView .class2 {
       -webkit-background-size: cover;
       -moz-background-size: cover;

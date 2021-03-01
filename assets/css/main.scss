@@ -671,11 +671,39 @@
                 img{height: auto;max-width: 100%;vertical-align: bottom;}
             }
         }
+            #danCnt4{width: 100%;position: relative;font-family: roboto;background: #fff;
+            h2{position: absolute;top: 5vw;left: 5vw;font-size: 2vw;}
+            p{position: absolute;left: 5vw;font-size: 1.2vw;}
+            .aboutSubTxt{top: 8vw;margin-bottom: 65.43vw;}
+            .txt{top: 13vw;line-height: 2vw;}
+            div{position: absolute;top: 5vw;right: 0vw;width: 55vw;
+                img{height: auto;max-width: 100%;vertical-align: bottom;}
+            }
+          }
+          #danCnt5{width: 100%;position: relative;font-family: roboto;background: #fff;
+            h2{position: absolute;top: 5vw;left: 5vw;font-size: 2vw;}
+            p{position: absolute;left: 5vw;font-size: 1.2vw;}
+            .aboutSubTxt{top: 8vw;margin-bottom: 65.43vw;}
+            .txt{top: 13vw;line-height: 2vw;}
+            div{position: absolute;top: 5vw;right: 0vw;width: 54vw;
+                img{height: auto;max-width: 100%;vertical-align: bottom;}
+            }
+          }
+          #danCnt6{width: 100%;position: relative;font-family: roboto;background: #fff;
+            div{ 
+                @include transform(translate(-46%, -50%));
+                position: absolute;top: 44%;left: 50%;width: 34.11vw;
+                img{height: auto;max-width: 100%;vertical-align: bottom;}
+            }
+            a{@include transform(translate(-50%, -50%));
+                position: absolute;top: 50%;left: 50%;font-size: 1.56vw;background: #fff;border: 3px solid #000;width: 11.67vw;height: 3.28vw;line-height: 3.28vw;text-align: center;}
+            a:hover, a.focus{background: #000;color: #fff}
+        }
         }
         .class2{
             @include bgsize(cover);
             background: url("../images/about_me/x.png") no-repeat center;position: absolute;right: 0;border-left: 3px solid #000;top: 0;width:6.57vh;height: 6.57vh;
         }
 }
-}
+        }
 }
